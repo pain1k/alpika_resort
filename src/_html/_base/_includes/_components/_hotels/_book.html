@@ -1,0 +1,96 @@
+
+  <div class="container main-top__booking absolute">
+    {% set hotels = ['Любой отель','гранд отель поляна','поляна 1389 отель и спа','виллы гранд отель поляна']%}
+      <form action="/" class="booking__form desktop-only">
+        <div class="input-groups d-grid booking__form-groups">
+          <div class="input-group booking__form-group relative width-drop">
+            <div class="booking__form-item reservation-hotel" data-toggle="hotel">
+              <span class="span-value">любой отель</span>
+              <input type="hidden" name="hotel" value="любой отель">
+            </div>
+            <div class="booking__dropdown absolute">
+              {% for hotel in hotels %}
+              <div class="booking__hotel-name{% if hotel==='Любой отель' %} actived{% endif %}">{{hotel}}</div>
+              {% endfor %}
+            </div>
+            <div class="angle absolute">
+              <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.59766 11.4016L0.597656 0.601564L12.5977 0.601562L6.59766 11.4016Z" fill="#ffffff" />
+              </svg>
+            </div>
+          </div>
+          <div class="input-group booking__form-group relative">            
+            <input type="hidden" name="datefrom" value="22.09.2022" class="reservation-dates-date_start">
+            <input type="hidden" name="dateto" value="23.09.2022" class="reservation-dates-date_end">
+            <div class="booking__form-item reservation-dates flatpkr flatpickr-input" readonly="readonly">
+              <a href="" title="" class="reservation-dates-date"></a>
+            </div>
+            <div class="c-icon absolute">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11.2821 0C11.6219 0 11.8974 0.278457 11.8974 0.621951V3.93902C11.8974 4.28252 11.6219 4.56098 11.2821 4.56098C10.9422 4.56098 10.6667 4.28252 10.6667 3.93902V0.621951C10.6667 0.278457 10.9422 0 11.2821 0Z"
+                fill="#ffffff" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.71795 0C5.05782 0 5.33333 0.278457 5.33333 0.621951V3.93902C5.33333 4.28252 5.05782 4.56098 4.71795 4.56098C4.37808 4.56098 4.10256 4.28252 4.10256 3.93902V0.621951C4.10256 0.278457 4.37808 0 4.71795 0Z"
+                fill="#ffffff" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 6.42683C0 6.08333 0.275517 5.80488 0.615385 5.80488H15.3846C15.7245 5.80488 16 6.08333 16 6.42683C16 6.77032 15.7245 7.04878 15.3846 7.04878H0.615385C0.275517 7.04878 0 6.77032 0 6.42683Z"
+                fill="#ffffff" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 3.93902C0 2.67919 1.00988 1.65854 2.25641 1.65854H13.7436C14.9901 1.65854 16 2.67919 16 3.93902V14.7195C16 15.9793 14.9901 17 13.7436 17H2.25641C1.00988 17 0 15.9793 0 14.7195V3.93902ZM2.25641 2.90244C1.68961 2.90244 1.23077 3.36618 1.23077 3.93902V14.7195C1.23077 15.2924 1.68961 15.7561 2.25641 15.7561H13.7436C14.3104 15.7561 14.7692 15.2924 14.7692 14.7195V3.93902C14.7692 3.36618 14.3104 2.90244 13.7436 2.90244H2.25641Z"
+                fill="#ffffff" />
+            </svg>
+
+            </div>
+          </div>
+          <div class="input-group booking__form-group adult relative width-drop">
+            <div class="booking__form-item reservation-person" data-toggle="person">
+              <span class="span-value">1 взрослый</span>
+              <input type="hidden" name="person" value="1 взрослый">
+            </div>
+            <div class="booking__dropdown absolute">
+              <div class="booking__person-box">
+                <div class="booking__person-selecter d-flex">
+                  <div class="booking__person-name">                  
+                    <span class="d-block">взрослые</span>
+                    <span class="d-block">От 13 лет</span>
+                  </div>
+                  <div class="booking__person-quantity d-flex">                  
+                    <div class="booking__person-dec booking__person-button disable" data-math="remove"></div>
+                    <input class="booking__person-result" id="adult" value="1" data-min="1" readonly/>
+                    <div class="booking__person-inc booking__person-button" data-math="add"></div>
+                  </div>
+                </div>
+                <div class="booking__person-selecter children d-flex">
+                  <div class="booking__person-name">                  
+                    <span class="d-block">дети</span>
+                    <span class="d-block">0-12 лет</span>
+                  </div>
+                  <div class="booking__person-quantity d-flex">                  
+                    <div class="booking__person-dec booking__person-button disable" data-math="remove"></div>
+                    <input class="booking__person-result" id="children" value="0" data-min="0" readonly/>
+                    <div class="booking__person-inc booking__person-button" data-math="add"></div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="angle absolute">
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.59766 11.4016L0.597656 0.601564L12.5977 0.601562L6.59766 11.4016Z" fill="#ffffff" />
+            </svg>
+          </div>
+          </div>
+          <div class="input-group">
+            <button type="submit" class="btn btn-submit text-uppercase">
+              подобрать номер
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="botton-md md">
+        <a href="#" class="btn btn-submit text-uppercase d-flex jcc">
+           подобрать номер
+        </a>
+      </div> 
+  </div>

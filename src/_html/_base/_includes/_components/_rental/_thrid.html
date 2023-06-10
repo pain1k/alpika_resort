@@ -1,0 +1,31 @@
+
+{% set clothing = [
+  {name:'куртка',price:'1 000',image:'/assets/img/rental/accessories/1.jpg'},  
+  {name:'брюки',price:'500',image:'/assets/img/rental/accessories/2.jpg'},  
+  {name:'шлем',price:'1 000',image:'/assets/img/rental/accessories/3.jpg'},  
+  {name:'горнолыжные очки',price:'500',image:'/assets/img/rental/accessories/4.jpg'},  
+  {name:'перчатки',price:'1 000',image:'/assets/img/rental/accessories/5.jpg'},  
+  {name:'защита для спины',price:'1 000',image:'/assets/img/rental/accessories/fake2.jpg'},  
+  {name:'туристический коврик',price:'500',image:'/assets/img/rental/accessories/fake2.jpg'}
+  ] %}
+{% set desc = 'Снаряжение базового уровня подойдет для начинающих райдеров' %}
+<section class="section bx" id="skp3">
+  <h2 class="inner-title home-gallery__title text-center line-after">
+    <span>  
+      горнолыжная одежда <br>и аксессуары для катания
+    </span>
+  </h2>
+  <div class="container rental__accessories d-grid">
+    {% for item in clothing %}
+    <div class="rental__accessorie relative">
+      <div class="inner-title inner-title--nogutters rental__accessorie-name">{{item.name}}</div>
+      <div class="rental__accessorie-footer">
+        <div class="display-h2 display-h2--nogutters rental__accessorie-price">{{item.price}}₽</div>
+        <div class="description rental__accessorie-unit">в день</div>
+      </div>
+      <img src="{{item.image}}" alt="">
+    </div>
+    {% endfor %}
+  </div>
+</section>
+

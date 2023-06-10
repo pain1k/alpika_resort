@@ -1,0 +1,220 @@
+.program-signup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $light;
+  padding-top: 60rem;
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+  overflow-y: auto;
+  @media (max-width:576px) {
+      padding-top: 72rem;
+    }
+  &__container{
+    margin: 0 auto;
+    width: 494rem;
+    &--wp{
+      padding-bottom: 50rem;
+      @media (max-width:576px) {
+          padding-bottom: 30rem;
+        }
+    }
+    @media (max-width:576px) {
+        width: calc(100% - 40rem);
+      }
+  }
+
+  &__title{
+    margin-bottom: 30rem;
+    text-align: center;
+    @media (max-width:576px) {
+        margin-bottom: 40rem;
+      }
+  }
+
+  &__input{
+    position: relative;
+    width: 100%;
+    height: 64rem;
+    margin-bottom: 23rem;
+    text-transform: uppercase;
+    @media (max-width:576px) {
+        height: 52rem;
+        margin-bottom: 30rem;
+      }
+    input,textarea{
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-bottom: 1.5rem solid $dark;
+      font-size: 16rem;
+      line-height: 20rem;
+      &:focus{
+        outline: none;
+        border: none;
+        border-bottom: 1.5rem solid $accent;
+        &::placeholder{
+          opacity: 0;
+        }
+      }
+
+      &::placeholder{
+        text-transform: uppercase;        
+        font-weight: 500;
+        color: $disable;
+        letter-spacing: 1.8rem;
+        font-size: 16rem;
+        line-height: 20rem;
+      }
+      .news__time{
+        color: $disable;
+      }
+      
+    }
+    textarea{
+      padding: 0!important;
+    }
+    textarea::placeholder{
+      padding-top: 25rem;
+      @media (max-width:576px) {
+          padding-top: 17rem;
+        }
+    }
+        &-icon {
+          width: 24rem;
+          height: 24rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+  }
+  &__location{
+    padding-top: 16rem;
+    padding-bottom: 30rem;
+    @media (max-width:576px) {
+        padding-top: 0;
+      }
+    &-title {
+        font-weight: 500;
+        color: $disable;
+        letter-spacing: 1.8rem;
+        font-size: 16rem;
+        line-height: 20rem;
+        margin-bottom: 24rem;
+      }
+  }
+  &__label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    &:not(:last-child){
+      margin-bottom: 16rem;
+    }
+    input{
+      display: none;
+
+      &:checked + i {
+        background-color: $dark;
+        &::before{
+          display: block;
+        }
+      }
+    }
+    i{
+      width: 28px;
+      height: 28rem;
+      display: block;
+      position: relative;
+      margin-right: 16rem;
+      border: 1.5rem solid #222A2F;
+      border-radius: 50%;
+      &::before{
+        content:"";
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        line-height: 10rem;
+        background-color: $light;
+        display: none;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__btn{
+    @include btn();
+    @media (max-width:576px) {
+        height: 48rem;
+        font-size: 14rem;
+        line-height: 48rem;
+      }
+  }
+  &__close{
+    top: 48.34rem;
+    right: 48.34rem;
+    cursor: pointer;
+    @media (max-width:576px) {
+        top: 26.6rem;
+        right: 26.6rem;
+      }
+  }
+  &__footer{
+    padding-top: 33rem;
+    margin-bottom: 8rem;
+    @media (max-width:576px) {
+        padding-top: 10rem;
+      }
+  }
+  &__accept{
+    font-size: 16rem;
+    line-height: 20rem;
+    letter-spacing: -0.3rem;
+    max-width: 396rem;
+    @media (max-width:576px) {
+        font-size: 12px;
+        line-height: 14rem;
+        max-width: 335rem;
+      }
+    a{
+      border-bottom:1rem solid $dark;
+    }
+  }
+
+    .simplebar-scrollbar.simplebar-visible{
+      max-height: 122rem;
+      &::before{
+        background: $accent;
+        opacity: 1;
+        width: 2rem;
+      }
+    }
+    .simplebar-track.simplebar-vertical{
+      width: 8rem;
+    }
+
+    &--bizness{
+      @media (max-width:375px) {
+        .program-signup__input{
+          margin-bottom: 24rem;
+          height: 53rem;
+        }
+        .program-signup__footer{
+          padding-top: 17rem;
+        }
+      }
+    }
+    .news__select{
+      @media (max-width:576px){
+        height: 52rem;
+      }
+    }
+}

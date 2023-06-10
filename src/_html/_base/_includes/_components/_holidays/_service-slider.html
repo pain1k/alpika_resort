@@ -1,0 +1,52 @@
+
+<section class="section services">
+  <div class="container services__container relative">
+    <h2 class="display-h2 services__title text-uppercase">
+      катание <br>под звездным <br>небом
+    </h2>
+    <div class="services__slider swiper">
+        <div class="services__wrapper swiper-wrapper">
+          {% for item in ['slope','slope2','slope3'] %}
+          <div class="services__item swiper-slide">
+            <div class="services__item-box relative d-flex">
+              <div class="services__item-image">
+                <picture>
+                  <source srcset="assets/img/sliders/services/{{item}}.webp" type="image/webp">
+                  <img src="assets/img/sliders/services/{{item}}.jpg" alt="">
+                </picture>
+              </div>
+              <div class="services__item-content">
+                <div class="services__item-info">
+                  <h3 class="services__item-name text-uppercase">
+                    на склоне лаура <br>с 18.00 до 23.00
+                  </h3>
+                  <div class="services__item-desc">
+                    Вечернее катание на Курорте Газпром - одно из самых романтичных развлечений.
+                  </div>
+                  <a href="#" class="services__item-link box-link">
+                    изучить трассы
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>        
+          {% endfor %}
+        </div>
+      </div>
+      <div class="services__nav slider-paginator"></div>
+      <div class="services__arrows slider__arrows services__arrows--lg d-flex">
+        <div class="slider__arrow-prev services__arrow-prev">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.671875L0 5.002L7.5 9.33213V5.752H112V4.252H7.5V0.671875Z"
+              fill="#0F6EB4" />
+          </svg>
+        </div>
+        <div class="slider__arrow-next services__arrow-next">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M104.5 0.671875L112 5.002L104.5 9.33213V5.752H0V4.252H104.5V0.671875Z" fill="#0F6EB4" />
+          </svg>
+        </div>
+      </div>
+    </div>  
+</section>

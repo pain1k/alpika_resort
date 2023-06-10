@@ -1,0 +1,13 @@
+{% set title = "рестораны" %}
+{% set bodyClass = "is-restaurants" %}
+{% set wrapperClass = "wp-restaurants" %}
+{% set darkToggler = true %}
+{% set maskedPhone = true %}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_restaurants/_banner.html" %}  
+   {% include "_html/_base/_includes/_components/_restaurants/_restaurants.html" %}  
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+   {% include "_html/_base/_includes/_components/_restaurant/_program-signup.html" %}
+{% endblock %}

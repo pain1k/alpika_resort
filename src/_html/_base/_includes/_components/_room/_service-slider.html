@@ -1,0 +1,56 @@
+
+<section class="section services">
+  <div class="container services__container relative">
+    <h2 class="display-h2 services__title text-uppercase">
+      другие номера <br>отеля
+    </h2>
+    <div class="services__slider swiper">
+        <div class="services__wrapper swiper-wrapper">
+          {% for item in ['hotel-single','hotel-single','hotel-single'] %}
+          <div class="services__item swiper-slide">
+            <div class="services__item-box relative d-flex">
+              <div class="services__item-image">
+                <picture>
+                  <source srcset="assets/img/sliders/services/{{item}}.webp" type="image/webp">
+                  <img src="assets/img/sliders/services/{{item}}.jpg" alt="">
+                </picture>
+              </div>
+              <div class="services__item-content">
+                <div class="services__item-info">
+                  <h3 class="services__item-name services__item-name--mb12 text-uppercase">
+                    Полулюкс
+                  </h3>
+                  <div class="description services__item-price">
+                    24 900р за ночь / до 3 гостей
+                  </div> 
+                  <div class="services__item-desc services__item-desc--fill">
+                    Однокомнатный номер площадью 40 кв.м. состоящий из спальни и совмещенной туалетной комнаты с душевой кабиной и ванной. В
+                    спальне расположены две раздельные или одна большая king кровати, а также зона с мягкой мебелью и диваном.
+                  </div>
+                  <a href="#" class="services__item-link box-link">
+                    узнать больше
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>        
+          {% endfor %}
+        </div>
+      </div>
+      <div class="services__nav slider-paginator"></div>
+      <div class="services__arrows slider__arrows d-flex">
+        <div class="slider__arrow-prev services__arrow-prev">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.671875L0 5.002L7.5 9.33213V5.752H112V4.252H7.5V0.671875Z"
+              fill="#0F6EB4" />
+          </svg>
+        </div>
+        <div class="slider__arrow-next services__arrow-next">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M104.5 0.671875L112 5.002L104.5 9.33213V5.752H0V4.252H104.5V0.671875Z" fill="#0F6EB4" />
+          </svg>
+        </div>
+      </div>
+    </div>  
+</section>

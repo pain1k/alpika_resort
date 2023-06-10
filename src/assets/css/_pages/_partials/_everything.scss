@@ -1,0 +1,103 @@
+.everything{
+  &__title{
+    margin-bottom: 30rem;
+  }
+  
+  &__head{
+    padding-top: 40rem;
+    max-width: 365rem;
+    @media (max-width:1200px) {
+        padding-top: 0;
+      }
+  }
+  &__info{
+    width: 1007rem;
+    grid-template-columns: repeat(2,1fr);
+    @media (max-width:1599px){
+     width: calc(100% - 460rem);
+    }
+    @media (max-width:1200px){
+        width: 100%;
+        margin-top: 40rem;
+      }
+    @media (max-width:991px){
+        grid-template-columns: 1fr;
+      }
+  }
+  &__item{
+    padding-top: 40rem;
+    padding-bottom: 40rem;
+    border-top: 1.5rem solid $dark;
+    &:nth-child(3),&:nth-child(4){
+      padding-bottom: 0;
+      @media (max-width:991px) {
+          padding-bottom: 40rem;
+        }
+    }
+    &:last-child{
+      @media (max-width:991px) {
+          padding-bottom: 0;
+        }
+    }
+    @media (max-width:767px) {
+          justify-content: flex-start;
+        }
+    &-content{
+      padding-right: 26rem;
+      width: calc(100% - 102rem);
+      @media (max-width:1440px) {
+          width: calc(100% - 84rem);
+          // padding-right: 16rem;
+        }
+      @media (max-width:767px) {
+          width: 70%;
+          padding: 0;
+          margin-left: 12rem;
+        }
+      @media (max-width:576px){
+        margin-left: 0;
+        width: 100%;
+      }
+      
+    }
+    &-name{
+      font-size: 30rem;
+      line-height: 36rem;
+      letter-spacing: 1.8rem;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin-bottom: 16rem;
+      @media (max-width:767px) {
+          font-size: 22rem;
+            line-height: 24rem;
+            letter-spacing: 1.4rem;
+        }
+
+      br{
+        display: none;
+        @media (max-width:428px){
+          display: block;
+        }
+      }
+    }
+    &-icon{
+      @media (max-width:576px){
+        display: none;
+      }
+    }
+
+    &-mobile{
+      width: 63rem;
+      height: 63rem;
+      margin-right: 12rem;
+      background-position: 0 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: none;
+      @media (max-width:576px) {
+          display: block;
+        }
+    }
+  }
+
+}

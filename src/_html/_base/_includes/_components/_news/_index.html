@@ -1,0 +1,55 @@
+{% set news = [
+  {id:1,name:'Открытие горнолыжного сезона 22/23',desc:'В предстоящем зимнем сезоне курорт предложит разнообразные возможности для активного отдыха'},
+  {id:2,name:'Открытая тренировкапо плаванию',desc:'Поучаствовать в открытом уроке смогут все желающие'},
+  {id:3,name:'Новый годна Курорте Газпром',desc:'Окружите себя сказочной атмосферой гор в новогоднюю ночь, проведите праздники в горах'},
+  {id:4,name:'Гастроужин с Chateau de Talu',desc:'26 августа Гранд Отель Поляна корпус В, ресторан Сезон вновь радует Вас гастрономическим путешествием'},
+  {id:5,name:'Открытая тренировка по теннису',desc:'2 сентября открытый урок по теннису с Чемпионкой Мира Евгенией Гребенюк'},
+  {id:6,name:'Горы с кэшбеком снова на Курорте',desc:'С 25 августа оплачивайте картой МИР проживание в отелях курорта Газпром и получайте кэшбэк до 20 тысяч рублей'},
+  {id:7,name:'Насладитесь блюдами от шефов',desc:'В ресторане Сезон в Гранд Отель Поляна 16 декабря пройдет гастрономический ужин.'},
+  {id:8,name:'прогулки в горах за 333 рубля',desc:'Катайте и гуляйте на майских с Курортом Газпром за 333 рубля.'},
+  {id:9,name:'Роскошное спа-предложение в Гранд Отель Поляна',desc:'При бронировании услуги из спа-меню от 2,5 тысяч рублей, посещение термальной зоны в подарок.'},
+  {id:10,name:'Фитнес-день',desc:'12 августа тренировка Body Strong и  аквааэробика'},
+  {id:11,name:'первая в россии лыжная школа WE CLUB',desc:'Вас ждут олимпийская трасса, тренеры мирового уровня, высокий сервис и прокат снаряжения'},
+  {id:11,name:'Бронирование отелей на зиму',desc:'Уважаемые гости, мы рады сообщить, что бронирование отелей до 31 марта 2023 г. доступно на нашем сайте.'}
+] %}
+
+<section class="section news">
+<div class="container news__container">
+  <div class="news__head d-flex jcsb">
+    <h1 class="display-h1 news__title text-uppercase">новости <br>курорта</h1>
+    <div class="form-group news__formgroup text-uppercase relative">
+      <div class="news__select d-flex jcsb">
+        <span class="news__time">за весь период</span>
+        <div class="news__select-icon">
+          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.58399 9L0.583984 9.08524e-07L10.584 0L5.58399 9Z" fill="#222A2F" />
+          </svg>
+        </div>
+      </div>
+      <div class="news__select-dropdown absolute">
+        <div class="news__select-name actived">за весь период</div>
+        <div class="news__select-name">октябрь</div>
+        <div class="news__select-name">сентябрь</div>
+        <div class="news__select-name">август</div>
+      </div>
+    </div>
+  </div>
+  <div class="news__list d-grid">
+    {% for item in news %}
+      <div class="news__list-item">
+        <div class="news__list-img">
+          <img src="/assets/img/news/{{item.id}}.jpg" alt="">
+        </div>
+        <div class="news__list-content">
+          <div class="news__list-name text-uppercase">{{item.name}}</div>
+          <div class="description news__list-desc">{{item.desc}}</div>
+          <a href="#" class="box-link news__list-link">узнать больше</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="container news__footer d-flex jcc">
+  <a href="#" class="news__more text-uppercase">показать еще</a>
+</div>
+</section>

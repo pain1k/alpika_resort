@@ -1,0 +1,37 @@
+<section class="section cck-n-biatlone">
+  <h2 class="inner-title masters__title text-center line-after">
+    <span>
+      биатлон
+    </span>
+  </h2>
+  <div class="container">
+    {% set tarifs = [
+    {name:'индивидуальная тренировка',desc:'Обучение одного человека
+    <br>лично с тренером',p1:'3 500'},
+    {name:'парная тренировка',desc:'Обучение одного человека
+    <br>лично с тренером',p1:'5 500'}
+    
+    ] %}
+    <div class="tarifs d-grid">
+      {% for tarif in tarifs %}
+      <div class="tarifs__item">
+        <div class="inner-title tarifs__header">
+          {{tarif.name}}
+        </div>
+        <div class="description tarif__desc">
+          {{tarif.desc | striptags(true) | escape | nl2br}}
+        </div>
+        <div class="tarifs__footer d-flex jcsb">
+          <div class="tarifs__pricesbox d-flex">
+            <div class="tarifs__price">
+              <div class="tarifs__num">{{tarif.p1}}₽</div>
+              <div class="description tarifs__unit">1 час</div>
+            </div>            
+          </div>
+          <a href="#" class="tarifs__link text-uppercase">записаться</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

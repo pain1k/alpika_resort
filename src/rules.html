@@ -1,0 +1,24 @@
+{% set title = "Правила посещения курорта" %}
+{% set bodyClass = "is-rules" %}
+{% set wrapperClass = "wp-rules" %}
+{% set headerClass = "header--dark" %}
+{% set topLinkText = "главная страница" %}
+{% set darkToggler = true %}
+
+
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_room/_top.html" %}     
+   <div class="container">
+        <h1 class="display-h1 page-name text-uppercase">
+            Правила посещения <br>курорта
+        </h1>
+   </div>
+<div class="rules">
+{% include "_html/_base/_includes/_components/_rules/_main.html" %}
+{% include "_html/_base/_includes/_components/_rules/_bases.html" %}
+{% include "_html/_base/_includes/_components/_rules/_evidence.html" %}
+</div>
+{% endblock %}

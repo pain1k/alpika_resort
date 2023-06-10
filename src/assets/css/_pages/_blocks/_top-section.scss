@@ -1,0 +1,40 @@
+.top-section{
+  margin-top: 150rem;
+  margin-bottom: 80rem;
+  @media (max-width:1440px) {
+      margin-top: 120rem;
+      margin-bottom: 60rem;
+    }
+    @media (max-width:991px) {
+      margin-bottom: 0;
+      padding-bottom: 40rem;
+      margin-top: 60rem;
+    }
+  &__link{
+    @extend .box-link;
+    display: inline-flex;
+    align-items: center;
+    &--left{
+      span{
+        margin-left: 17rem;
+        @media (max-width:767px) {
+          margin-left: 12rem;
+        }
+      }
+    }
+    &--right{
+      span{
+        margin-right: 17rem;
+        @media (max-width:767px) {
+          margin-right: 12rem;
+        }
+      }
+    }
+  }
+  .container{
+    @media (max-width:991px) {
+        display: none;
+      }
+    
+  }
+}

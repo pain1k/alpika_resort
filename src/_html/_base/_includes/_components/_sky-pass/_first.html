@@ -1,0 +1,186 @@
+<section class="section section--lg bx" id="skp">
+  <div class="container skp">
+    <div class="skp__box skp__box--day d-flex relative">
+      <!--  -->
+      <div class="skp__box-header d-flex jcsb">
+        <div class="skp__box-main skp__box-main--small">
+          <div class="inner-title skp__box-name">дневной ски-пасс 2.0 <br><span class="sm-hide">сегодня</span> 8.30-16.00</div>
+          <div class="description skp__box-desc ">
+            <span>Стоимость зависит от погодных условий</span>
+            <i></i>
+          </div>
+        </div>
+        <div class="inner-title skp__box-temperature">    
+          <i class="sun"></i>    
+          <span>-10</span>
+          <span>&deg;C</span>                
+        </div>
+      </div>
+      <!--  -->
+      <div class="skp__box-footer d-flex jcsb">
+        <div class="skp__box-prices">
+          <div class="skp__box-price relative">
+            <div class="skp__box-price_old old absolute hide-lg">1 100₽</div>
+            <span class="price">
+              900₽
+              <span class="skp__box-price_old old absolute show-lg">1 100₽</span>
+            </span>
+            <span class="description insite"><span class="show-lg">взрослый&nbsp;</span>на сайте</span>
+          </div>
+          <div class="description skp__box-unit">
+            <div class="skp__box-unit_old old relative">700₽</div>
+            <div class="skp__box-unit_current">
+              <span class="hide-lg">500₽ — детский</span>
+              <div class="skp__box-unit_mobile show-lg">500₽</div>
+              <div class="skp__box-unit_mobileunder show-lg">детский</div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="skp__box-btn">купить</a>
+      </div>
+      <div class="svg-absolute absolute">
+        <img src="/assets/img/sky/day.svg" alt="">
+      </div>
+    </div>
+    <!-- xxxxxxxxxxxxx -->
+    <div class="skp__box skp__box--night d-flex relative">
+      <!--  -->
+      <div class="skp__box-header d-flex jcsb">
+        <div class="skp__box-main skp__box-main--small">
+          <div class="inner-title skp__box-name">дневной ски-пасс 2.0 <br><span class="sm-hide">сегодня</span> 8.30-16.00</div>
+          <div class="description skp__box-desc ">
+            <span>Стоимость зависит от погодных условий</span>
+            <i></i>
+          </div>
+        </div>
+        <div class="inner-title skp__box-temperature">
+          <i class="cloud"></i>
+          <span>-10</span>
+          <span>&deg;C</span>
+        </div>
+      </div>
+      <!--  -->
+      <div class="skp__box-footer d-flex jcsb">
+        <div class="skp__box-times">
+          <div class="skp__box-time price">01 ч 20 мин <br class="sm">30 сек</div>
+          <span class="description skp__box-time_bottom">до старта продаж</span>
+        </div>
+        <a href="#" class="skp__box-btn">купить</a>
+      </div>
+      <div class="svg-absolute absolute">
+        <img src="/assets/img/sky/night.svg" alt="">
+      </div>
+    </div>
+    <!-- xxxxxxxxxxxxxxx -->
+    <div class="skp-tarifs">
+      {% set tarifs = [
+      {id:1,name:'ски-пасс на 7 дней
+      <br>8.30-16.00',desc:'Неограниченный доступ к трассам
+      <br>Лауры и Альпики в любые дни сезона',p1:'15 750',ch:'8 200'},
+      {id:2,name:'ски-пасс на весь сезона',desc:'Неограниченный доступ к трассам Лауры
+      <br>и Альпики 10 ноября 2022 - 10 апреля 2023
+      <br>с 8.30 до 23.30',p1:'44 000',ch:'20 000'}
+    
+      ] %}   
+      <div class="tarifs d-grid">
+        {% for tarif in tarifs %}
+        <div class="tarifs__item">
+          <div class="inner-title tarifs__header d-flex">
+            <span class="skp-tarifs__title{% if tarif.id==1 %} with-counter{% endif %}">{{tarif.name | striptags(true) | escape | nl2br}}</span>
+            {% if tarif.id==1 %}
+            <div class="privileges__dc d-flex">
+              <div class="privileges__decriment"></div>
+              <div class="privileges__increment"></div>
+            </div>
+            {% endif %}
+          </div>
+          <div class="description tarifs__desc">
+            {{tarif.desc | striptags(true) | escape | nl2br}}
+          </div>
+          <div class="tarifs__footer d-flex jcsb">
+            <div class="tarifs__pricesbox d-flex">
+              <div class="tarifs__price">
+                <div class="tarifs__num">{{tarif.p1}}₽</div>
+                <div class="description tarifs__unit show-lg">взрослый</div>
+                <div class="description tarifs__unit hide-lg">детский - {{tarif.ch}}₽</div>
+                <div class="tarifs__num tarifs__num-child show-lg">{{tarif.ch}}₽</div>
+                <div class="description tarifs__unit show-lg">детский</div>
+              </div>
+            </div>
+            <a href="#" class="tarifs__link tarifs__link--pay text-uppercase">купить</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+    <div class="skp__box-wrapp">
+      <div class="skp__box skp__box--pass d-flex relative">
+        <!--  -->
+        <div class="skp__box-header d-flex jcsb">
+          <div class="skp__box-main">
+            <div class="inner-title skp__box-name">единый ски-пасс</div>
+            <div class="description skp__box-description ">
+              <span>Доступ к трассам курортов Газпром, Роза Хутор и Красная Поляна. Для туристов открываются все прокаты снаряжения, школы
+              инструкторов, рестораны, кафеи другие услуги.</span>          
+            </div>
+          </div>
+          <div class="skp__box-logos_mobile show-lg">
+            <div class="skp__box-logos d-flex">
+              <span><img src="/assets/img/sky/gazprom.svg" alt=""></span>
+              <span><img src="/assets/img/sky/rose.svg" alt=""></span>
+              <span><img src="/assets/img/sky/red.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="skp__box-footer d-flex jcsb">
+          <div class="skp__box-logos d-flex hide-lg">
+            <span><img src="/assets/img/sky/gazprom.svg" alt=""></span>
+            <span><img src="/assets/img/sky/rose.svg" alt=""></span>
+            <span><img src="/assets/img/sky/red.svg" alt=""></span>
+          </div>
+          <div class="description skp__box-access">Доступен в кассах курорта</div>
+        </div>
+        <div class="svg-absolute svg-absolute--pass absolute">
+          <img src="/assets/img/sky/pass.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- xxxxxxxxxxxxxxxxxxxxxxx -->
+    <div class="skp__contacts">
+      <div class="container contacts__container d-flex jcsb">
+        <div class="contacts__container-head">
+          <div class="inner-title contacts__container-title">
+            кассы и треминалы
+          </div>      
+        </div>
+        <div class="contacts__container-info d-flex">
+    
+          <div class="contacts__container-table">
+            <div class="inner-title contacts__container-name">лаура</div>
+            <div class="description contacts__container-row d-grid">
+              <div class="contacts__container-col">Кассы</div>
+              <div class="contacts__container-col">08.00 - 18.00</div>
+              <div class="contacts__container-col">Терминалы</div>
+              <div class="contacts__container-col">07.45 - 22.00</div>
+            </div>
+          </div>
+    
+          <div class="contacts__container-table">
+            <div class="inner-title contacts__container-name">альпика</div>
+            <div class="description contacts__container-row d-grid">
+              <div class="contacts__container-col">Кассы</div>
+              <div class="contacts__container-col">08.30 - 18.00</div>
+              <div class="contacts__container-col">Терминалы</div>
+              <div class="contacts__container-col">07.45 - 16.00</div>
+            </div>
+          </div>
+          
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,63 @@
+.school{
+  &__head{
+    padding-top: 40rem;
+    max-width: 365rem;
+      @media (max-width:1599px) {
+        max-width: unset;
+        width: 24.028966425%;
+      }
+       @media (max-width:991px){
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 40rem;
+      }
+  }
+  &__title{
+    margin-bottom: 0;
+  }
+  &__name{
+    margin-bottom: 30rem;
+    @media (max-width:767px) {
+        margin-bottom: 16rem;
+      }
+  }
+  &__item{
+    padding: 40rem 0;
+    border-top: 1rem solid $dark;
+    @media (max-width:767px){
+      padding: 30rem 0;
+    }
+    &-box{
+      width: 50%;
+      @media (max-width:767px) {
+        width: 100%;
+      }
+    }
+    &-box+&-box{
+      margin-top: 40rem;
+    }
+    &:last-child{
+      padding-bottom: 0;
+      .school__item-box{
+        @media (max-width:767px) {
+            width: 50%;
+          }
+      }
+      .school__item-box+.school__item-box{
+        @media (max-width:767px) {
+            margin-top: 0;
+          }
+      }
+    }
+  }
+  &__contacts{
+    width: calc(100% - 365rem - 148rem);
+
+    @media (max-width:1599px) {
+      width: 66.29361422%;
+    }
+    @media (max-width:991px){
+      width: 100%;
+    }
+}
+}

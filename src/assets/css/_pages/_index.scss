@@ -1,0 +1,38 @@
+/*blocks*/
+
+
+@import './main';
+@import './news';
+@import './news-single';
+@import './contacts';
+@import './sky-pass';
+@import "./restaurants";
+@import "./roads";
+@import "./rental";
+@import "./bizness";
+@import "./rules";
+@import "./ice-court";
+
+/*partials*/
+@import './_partials/book';
+@import './_partials/hotels';
+@import './_partials/sw';
+@import './_partials/service-slider';
+@import './_partials/gallery-slider';
+@import './_partials/map-separator';
+@import './_partials/page-menu';
+@import './_partials/events-slider';
+@import './_partials/news-slider';
+@import './_partials/awards';
+@import './_partials/history';
+@import './_partials/invest';
+@import './_partials/infra';
+@import './_partials/location';
+@import './_partials/privileges';
+@import './_partials/slope';
+@import './_partials/everything';
+@import './_partials/masters';
+@import './_partials/instructors';
+
+/*blocks*/
+@import "./_blocks/index";

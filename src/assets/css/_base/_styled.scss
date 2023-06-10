@@ -1,0 +1,110 @@
+
+.styled{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 27px;
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 16px;
+
+        @media (max-width:860px) {
+            grid-column-gap: 8px;
+            }
+        @media (max-width:575px) {
+            grid-column-gap: 0;
+            grid-row-gap: 8px;
+            grid-template-columns:1fr;
+            }
+    }
+
+    &__show{
+        display: inline-flex;
+        line-height: 1;
+        margin-bottom: 27px;
+        color: #333;
+    }
+
+    &__main{
+        img{
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__images{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 16px;
+        @media (max-width:860px) {
+            grid-gap: 8px;
+            }
+    }
+
+    &__image{
+        position: relative;
+        overflow: hidden;        
+        cursor: pointer;
+
+        &:hover{
+            .styled__image-bg{
+                top: 0;
+            }
+        }
+        
+        &-bg{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#000,.5);
+            transition: all .4s;
+        }
+
+        &-widget{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            color: #fff;
+        }
+
+        &-text{
+            padding-top: 7px;
+            margin-bottom: 0;
+        }
+
+        &-likes{
+            color: #fff;
+            position: absolute;
+            display: flex;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+
+            img{
+                margin-right: 6px;
+            }
+
+        }
+
+        &-wn{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    &__photo{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+}

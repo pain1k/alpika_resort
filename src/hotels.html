@@ -1,0 +1,13 @@
+{% set title = "Отели" %}
+{% set bodyClass = "is-hotels" %}
+{% set wrapperClass = "wp-hotels" %}
+{% set leftLink = 'EN' %}}
+{% set rightLink = 'маркетплейс' %}}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_hotels/_banner.html" %}  
+   {% include "_html/_base/_includes/_components/_hotels/_hotels.html" %} 
+   {% include "_html/_base/_includes/_components/_about/_privileges.html" %}
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

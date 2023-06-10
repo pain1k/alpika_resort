@@ -1,0 +1,21 @@
+{% set title = "коммерческие мероприятия" %}
+{% set bodyClass = "is-commers" %}
+{% set wrapperClass = "wp-commers" %}
+{% set headerClass = "header--dark" %}
+{% set intrier = true %}
+{% set noContainer = true %}
+{% set box = "_commers-top" %}
+{% set topLinkText = "организация мероприятий" %}
+{% set darkToggler = true %}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_room/_top.html" %}  
+   {% include "_html/_base/_includes/_components/_commers/_gallery-test.html" %}  
+   {% include "_html/_base/_includes/_components/_commers/_heading.html" %}  
+   {% include "_html/_base/_includes/_components/_commers/_conference.html" %}  
+   {% include "_html/_base/_includes/_components/_commers/_infrastructure.html" %}  
+   {% include "_html/_base/_includes/_components/_commers/_contacts.html" %}  
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+   {% include "_html/_base/_includes/_components/_commers/_fixed.html" %}
+{% endblock %}

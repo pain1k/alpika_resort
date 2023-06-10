@@ -1,0 +1,80 @@
+{% set title = "About" %}
+{% set bodyClass = "is-about" %}
+{% set wrapperClass = "wp-about" %}
+
+{% set sectionTitile = "курорт находится рядом с морем, 
+                        <br>в окружении гор Главного 
+                        <br>Кавказского Хребта" %}
+
+{% set historySlides = [
+
+{date:'1886',
+    items:{
+        first:{
+            img:"assets/img/sliders/history/1.jpg",desc:"Красная Поляна - самобытный курортный поселок с многовековой историей. Вокруг расположены сказочные горные ландшафты, реликтовые леса, кристально чистые горные озера."
+        },
+        second:{
+            img:"assets/img/sliders/history/2.jpg",desc:"Памятники истории и археологии здесь иллюстрируют страницы прошлого и оживляют местные легенды."
+        }
+    }
+},
+{date:'2000',
+    items:{
+        first:{
+            img:"assets/img/sliders/history/3.jpg",desc:"Красная Поляна - самобытный курортный поселок с многовековой историей. Вокруг расположены сказочные горные ландшафты, реликтовые леса, кристально чистые горные озера."
+        },
+        second:{
+            img:"assets/img/sliders/history/4.jpg",desc:"Памятники истории и археологии здесь иллюстрируют страницы прошлого и оживляют местные легенды."
+        }
+    }
+},
+{date:'2014',
+    items:{
+        first:{
+            img:"assets/img/sliders/history/1.jpg",desc:"Красная Поляна - самобытный курортный поселок с многовековой историей. Вокруг расположены сказочные горные ландшафты, реликтовые леса, кристально чистые горные озера."
+        },
+        second:{
+            img:"assets/img/sliders/history/2.jpg",desc:"Памятники истории и археологии здесь иллюстрируют страницы прошлого и оживляют местные легенды."
+        }
+    }
+},
+{date:'2015',
+    items:{
+        first:{
+            img:"assets/img/sliders/history/3.jpg",desc:"Красная Поляна - самобытный курортный поселок с многовековой историей. Вокруг расположены сказочные горные ландшафты, реликтовые леса, кристально чистые горные озера."
+        },
+        second:{
+            img:"assets/img/sliders/history/4.jpg",desc:"Памятники истории и археологии здесь иллюстрируют страницы прошлого и оживляют местные легенды."
+        }
+    }
+},
+{date:'2016',
+    items:{
+        first:{
+            img:"assets/img/sliders/history/1.jpg",desc:"Красная Поляна - самобытный курортный поселок с многовековой историей. Вокруг расположены сказочные горные ландшафты, реликтовые леса, кристально чистые горные озера."
+        },
+        second:{
+            img:"assets/img/sliders/history/2.jpg",desc:"Памятники истории и археологии здесь иллюстрируют страницы прошлого и оживляют местные легенды."
+        }
+    }
+}
+
+] %}
+
+{% set hotelsTitile = 'горнолыжные 
+                       <br>премиум отели' %}}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_about/_banner.html" %}    
+   {% include "_html/_base/_includes/_components/_gallery-test.html" %}  
+   {% include "_html/_base/_includes/_components/_sliders/_history.html" %} 
+   {% include "_html/_base/_includes/_components/_about/_investor.html" %} 
+   {% include "_html/_base/_includes/_components/_about/_hotels.html" %}  
+   {% include "_html/_base/_includes/_components/_awards.html" %}
+   {% include "_html/_base/_includes/_components/_sliders/_infrostructure.html" %} 
+   {% include "_html/_base/_includes/_components/_about/_location.html" %}
+   {% include "_html/_base/_includes/_components/_about/_privileges.html" %}
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

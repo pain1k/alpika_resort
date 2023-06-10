@@ -1,0 +1,59 @@
+.slope{
+  &__title{
+    margin-bottom: 120rem;
+    @media (max-width:991px){
+      margin-bottom: 60rem;
+    }
+  }
+  &__grid{
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20rem;
+    @media (max-width:1200px){
+      grid-column-gap: 4rem;
+    }
+    @media (max-width:767px){
+      grid-template-columns: 1fr;
+      grid-column-gap: unset;
+      grid-row-gap: 40rem;      
+    }
+    &-img{
+      margin-bottom: 30rem;
+      @media (max-width:767px) {
+          margin-bottom: 16rem;
+        }
+      @media (max-width:428px) {
+          height: 510rem;
+        }
+      img{
+        width: 100%;
+        display: block;
+        @media (max-width:428px) {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+      }
+    }
+    &-name{
+      margin-bottom: 30rem;
+      @media (max-width:767px) {
+          margin-bottom: 16rem;
+        }
+    }
+    
+    &-content{
+      max-width: 365rem;
+      @media (max-width:767px) {
+          padding-left: 20rem;
+          padding-right: 20rem;
+        }
+    }
+  }
+  &__container{
+    @media (max-width:767px){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+}

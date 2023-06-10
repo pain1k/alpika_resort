@@ -1,0 +1,116 @@
+.news{
+  &__container{
+    margin-top: 170rem;
+    @media (max-width:991px) {
+        margin-top: 90rem;
+      }
+  }
+  &__head{
+    align-items: flex-end;
+    margin-bottom: 120rem;
+    @media (max-width:991px) {
+      flex-flow: column;
+      margin-bottom: 40rem;
+      align-items: flex-start;
+      }
+  }
+
+  &__title{
+    @media (max-width:991px){
+      margin-bottom: 60rem;
+    }
+  }
+  
+  &__formgroup{
+    font-weight: normal;
+    width: 493rem;
+    @media (max-width:767px) {
+      width: 100%;
+    }
+  }
+  &__select{
+    height: 60rem;
+    align-items: center;
+    border-bottom: 1.5rem solid $dark;
+    font-weight: 500;
+    cursor: pointer;
+
+    &-icon{
+      transition: all .2s;
+    }
+    &.actived{
+      border-bottom: 1.5rem solid $accent;
+      .news__select-icon{
+        transform:scale(1,-1);
+        svg path{
+          fill:$accent;
+        }
+      }
+    }
+    &-dropdown{
+      @extend .booking__dropdown;
+      display: block;
+    }
+    &-name{
+      @extend .booking__hotel-name;
+    }
+  }
+  &__time{
+    font-size: 16rem;
+    line-height: 20rem;
+    letter-spacing: 1.8rem;
+  }
+  &__list{
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 20rem;
+    grid-row-gap: 80rem;
+
+    @media (max-width:1200px) {
+      grid-column-gap:10rem;
+      grid-row-gap: 60rem;
+    }
+    @media (max-width:991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:480px) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+    }
+
+    &-img{
+      margin-bottom: 16rem;
+      img{
+        width: 100%;
+      }
+    }
+    &-desc{
+      margin-top: 16rem;
+      margin-bottom: 16rem;
+    }
+    &-name{
+      @extend .inner-title;
+      margin-bottom: 0!important;
+    }
+    &-content{
+      max-width: 324rem;
+    }
+  }
+
+  &__footer{
+    margin-top: 90rem;
+    @media (max-width:768px) {
+        margin-top: 50rem;
+      }
+  }
+
+  &__more{
+    @include bordered(222rem,60rem,$dark,16rem,20rem,1.8px,500);
+    @media (max-width:768px) {
+      width: 100%;
+      height: 48rem;
+      font-size: 14rem;
+      line-height: 20rem;
+      letter-spacing: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{% set title = "мероприятия" %}
+{% set bodyClass = "is-measure" %}
+{% set wrapperClass = "wp-measure" %}
+{% set leftLink = 'EN' %}}
+{% set rightLink = 'маркетплейс' %}}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_measure/_banner.html" %}  
+   {% include "_html/_base/_includes/_components/_measure/_hotels.html" %}    
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

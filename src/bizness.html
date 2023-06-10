@@ -1,0 +1,27 @@
+{% set title = "Для бизнеса" %}
+{% set bodyClass = "is-bizness" %}
+{% set wrapperClass = "wp-bizness" %}
+{% set headerClass = "header--dark" %}
+{% set topLinkText = "зимний отдых" %}
+{% set darkToggler = true %}
+{% set maskedPhone = true %}
+
+{% set box = "_skp-top" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}       
+   <div class="container-page-top"></div>
+   <div class="container">
+        <h1 class="display-h1 display-h1--sm page-name text-uppercase">
+            Для бизнеса
+        </h1>
+   </div>
+{% include "_html/_base/_includes/_components/_bizness/_sky-passes.html" %}
+{% include "_html/_base/_includes/_components/_bizness/_first.html" %}
+{% include "_html/_base/_includes/_components/_bizness/_second.html" %}
+<div class="brone restaurants__brone-fixed">
+    <a href="#" class="main-top__measure-link btn-signup">обсудить условия</a>
+</div>
+{% include "_html/_base/_includes/_components/_bizness/_program-signup.html" %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% set title = "Номер" %}
+{% set bodyClass = "is-room" %}
+{% set wrapperClass = "wp-room" %}
+{% set headerClass = "header--dark" %}
+{% set intrier = true %}
+{% set box = "_room-top" %}
+{% set topLinkText = "ПОЛЯНА 1389 ОТЕЛЬ И СПА" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_room/_top.html" %}  
+   {% include "_html/_base/_includes/_components/_hotel/_gallery-test.html" %}  
+   {% include "_html/_base/_includes/_components/_room/_everything-need.html" %}  
+   {% include "_html/_base/_includes/_components/_room/_winter-summer.html" %}  
+   {% include "_html/_base/_includes/_components/_hotel/_investor2.html" %}
+    {% include "_html/_base/_includes/_components/_room/_service-slider.html" %} 
+    {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

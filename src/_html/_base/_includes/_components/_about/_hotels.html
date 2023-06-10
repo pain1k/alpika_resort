@@ -1,0 +1,35 @@
+<section class="section hotels section--lg">
+  {% set hotels = [
+  {title:'гранд отель поляна',desc:'Флагманский пятизвездочный отель курорта, расположен на высоте 550 м. Роскошь и спокойствие.',url:'#',img:'assets/img/hotel'},
+  {title:'ПОЛЯНА 1389 ОТЕЛЬ И СПА',desc:'Пятизвездочный ski-in ski-out отель на высоте 1389 м. Самый высокогорный отель Сочи. ',url:'#',img:'assets/img/hotel1'}
+  ] %}
+  <div class="container">
+    <h2 class="display-h2 hotels__title text-uppercase">
+    {% if hotelsTitile %}
+    {{hotelsTitile | striptags(true) | escape | nl2br}}
+    {% else %}
+     один курорт. <br>два отеля
+    {% endif %}
+    
+    </h2>
+    <div class="hotels__box d-grid">
+      {% for item in hotels %}
+        <div class="hotels__item relative">
+          <div class="hotels__info absolute">
+            <div class="inner-title hotels__name inner-title--mb">
+              {{item.title}}
+            </div>
+            <div class="hotels__desc">
+              {{item.desc}}
+            </div>
+            <a href="{{item.url}}" class="hotels__link box-link">узнать больше</a>
+          </div>
+          <picture>
+            <source srcset="{{item.img}}.webp" type="image/webp">
+            <img src="{{item.img}}.jpg" alt="">
+          </picture>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

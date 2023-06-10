@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ meta_description }}">
+    {% if calendar %}
+    <meta name="csrf-token" content="eyJpdiI6IlNvZ0JZSmhYQ3Fpa0FlUEJ2UVNGdEE9PSIsInZhbHVlIjoiVzZFd2htd0R6dmFHaXhGOUVsVlZTdFphZXlYc2xoZGQwTFwvNmVuRmhEVTkxWHk0VUwzZllnK29HTzJ6VkxTcmJ2Tk83a3U1dUE0ZjI3aURyQ2FiOUlnPT0iLCJtYWMiOiJkZDhlODgyMTZhNGRiMDdjMTQ3NzVkNjI0N2IyNTQ0Nzc1MDZkNzE4MGQ4NjhkMzZiMjA4NGMyNWI0MTNmN2NiIn0%3D" />
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="assets/css/app.min.css">
+</head>
+<body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
+    {% include "_html/_base/_includes/_header.html" %}
+    <div {% if wrapperClass %}class="wrapper {{ wrapperClass }}"{% endif %} id="wrapper">
+        <div class="content">
+           {% block content %}{% endblock %}
+        </div>
+
+        {% include "_html/_base/_includes/_footer.html" %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>   
+    {% if maskedPhone %}
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    {% endif %}
+    {% if calendar %}    
+    <script src="/assets/img/moment/moment.min.js"></script>
+    <script src="/assets/img/fullCalendar/fullcalendar.min.js"></script>
+    <script src="/assets/img/ru/ru.js"></script>
+    {% endif %}
+    <script src="assets/js/app.min.js"></script>
+
+    <div class="fixed-button-menu js-toggler{% if darkToggler %} fixed-button-menu--dark{% endif %}" >
+        <div class="fixed-button-icon">    
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    {% include "../_includes/_components/_block/_main-menu.html" %}    
+
+    {% if calendar %}
+
+    <script>
+        
+        let calendar = $('#calendar').fullCalendar({
+        locale:'ru',
+        // selectable: true,
+        selectHelper: true,
+        header:{
+            left:'title',
+            right:'prev ,next'
+        },
+        defaultView: 'month',
+        titleFormat:'События в MMMM YYYY',
+        events:[
+            {
+                title: 'Открытие зимнего сезона',
+                start: '2022-10-12T16:00:00',
+                end: '2017-10-12T16:00:00',                
+                imageurl:'/assets/img/hotel.jpg',
+                date:'12 октября, 16.00',
+                displayOrder:1
+            },
+            {
+                title: 'Открытие зимнего сезона',
+                start: '2022-10-12T17:00:00',
+                end: '2017-10-12T17:00:00',                
+                imageurl:'/assets/img/hotel.jpg',
+                date:'12 октября, 17.00',
+                displayOrder:2
+            },
+            {
+                title: 'Открытие зимнего сезона',
+                start: '2022-10-12T17:00:00',
+                end: '2017-10-12T17:00:00',                
+                imageurl:'/assets/img/hotel.jpg',
+                date:'12 октября, 17.00',
+                displayOrder:2
+            },
+            {
+                title: 'Открытие зимнего сезона',
+                start: '2022-10-12T17:00:00',
+                end: '2017-10-12T17:00:00',                
+                imageurl:'/assets/img/hotel.jpg',
+                date:'12 октября, 17.00',
+                displayOrder:2
+            },
+            {
+                title: 'Открытие зимнего сезона',
+                start: '2022-10-12T17:00:00',
+                end: '2017-10-12T17:00:00',                
+                imageurl:'/assets/img/hotel.jpg',
+                date:'12 октября, 17.00',
+                displayOrder:2
+            },
+            {
+                title: 'Открытие зимнего сезона',
+                start: '2022-10-20T17:00:00',
+                end: '2017-10-20T17:00:00',                
+                imageurl:'/assets/img/hotel.jpg',
+                date:'20 октября, 17.00',
+                displayOrder:2
+            },
+            {
+                title: 'Открытие зимнего сезона',
+                start: '2022-10-20T17:00:00',
+                end: '2017-10-22T17:00:00',                
+                imageurl:'/assets/img/hotel.jpg',
+                date:'20 октября, 17.00',
+                displayOrder:2
+            },
+        ],
+         eventOrder: 'displayOrder',
+        eventRender: function (event, eventElement, view) {                
+               eventElement.find(".fc-content").html(`
+               <div class='fc-img relative'>
+               <img src='${event.imageurl}'>
+               <div class='fc-tooltip absolute'>
+                    <div class='fc-tooltip-content'>
+                        <div class="fc-tooltip-date">${event.date}</div>
+                        <div class="fc-tooltip-title">${event.title}</div>
+                        <div href="#" class="fc-link top-section__link top-section__link--right">
+                            <span>Подробнее</span>
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 5.5L0.500001 0.5L0.5 10.5L9.5 5.5Z" fill="#0F6EB4"/>
+                            </svg>
+                        </div>
+                    </div>
+               </div>
+               </div>
+               `);  
+            },
+            eventAfterRender:function(){
+                eventPosition()       
+
+            },
+            eventChange:function(){
+                eventPosition()
+            },
+            viewRender:function(){
+                
+                let h2 = $('.fc-left h2').text().split(' ')[2].toString()
+                let str = $('.fc-left h2').text().replace(h2, MonthName())
+                $('.fc-left h2').text(str)
+
+                
+
+            }
+            
+            
+        })
+
+       
+        
+        
+        $('.fc-content').on('mouseenter',function(e){
+            $(e.currentTarget).find('.fc-tooltip').css('display', 'block') 
+        })
+        $('.fc-content').on('mouseleave',function(e){
+            $(e.currentTarget).find('.fc-tooltip').removeAttr('style')
+        })
+        function eventPosition(){
+
+            $('.fc-day-grid-event').each(function(i,e){
+               
+                if($('.fc-day-grid-event').length<=3){
+                    $(e).css({'top':$('.fc-day').height() - ((e.clientWidth / 3) + 24.5 + 8) + 'rem','left':i*40+7.6+'rem'})
+                }else{
+                    if(i<=2){
+                        $(e).css({ 'top': '0', 'left': i * 40 + 7.6 + 'rem' })
+                    }else{
+                        i-=3
+                        $(e).css({ 'top': $('.fc-day').height() - ((e.clientWidth / 3) + 24.5 + 8) + 'rem', 'left': i* 40 + 7.6 + 'rem' })
+                        
+                    }
+                }
+            })
+        }
+
+        function MonthName(){
+            let h2 = $('.fc-left h2').text().split(' ')[2]
+            switch(h2){
+                case 'январь' :
+                    return 'январе'
+                case 'февраль' :
+                    return 'феврале'
+                case 'март' :
+                    return 'марте'
+                case 'апрель' :
+                    return 'апреле'
+                case 'май' :
+                    return 'мае'
+                case 'июнь' :
+                    return 'июне'
+                case 'июль' :
+                    return 'июле'
+                case 'август' :
+                    return 'августе'
+                case 'сентябрь' :
+                    return 'сентябре'
+                case 'октябрь' :
+                    return 'октябре'
+                case 'ноябрь' :
+                    return 'ноябре'
+                case 'декабрь' :
+                    return 'декабре'
+                
+            }
+        }
+        
+        
+        
+    </script>
+    <style>
+        #calendar{
+            display: flex;
+            justify-content: space-between;
+        }
+        .fc-toolbar{
+            width: 341rem;
+            display: flex;
+            flex-flow: column;
+            text-transform: uppercase;
+        }
+        .fc-toolbar h2{
+            font-weight: 300!important;
+            font-size: 48rem;
+            line-height: 1;
+            letter-spacing: 2.5rem;
+            text-align: left;
+            max-width: 290rem;
+            margin-bottom: 40rem;
+        }
+        .fc-state-default{
+            position: relative;
+            padding: 0!important;
+            background: 0;
+            border: none;
+            text-shadow: none;
+            box-shadow: none;
+            display: inline-block;
+            float: none;
+            height: 24rem!important;
+            width: 112rem;
+        }
+         .fc-state-default span{
+            position: absolute!important;
+            top: 50%!important;
+            left: 0;
+            transform:translateY(-50%)!important;
+            width: 100%;
+            height: 8.6rem;
+            background-image: url('/assets/img/prev.svg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            margin: 0!important;
+         }
+         .fc-state-default:last-child span{
+            background-image: url('/assets/img/next.svg');
+         }
+         .fc-state-default span::after{
+            display: none;
+         }
+         /* .fc .fc-toolbar > * > :first-child{
+            width: 112rem;
+            height: 8.6rem;
+            background-image: url('/assets/img/flatpickr/prev.svg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+         } */
+        .fc-view-container{
+            width: calc(100% - 385rem);
+        }
+        .fc-img{
+        width: 64rem;
+        height: 64rem;        
+        border-radius: 50%;
+        box-sizing: border-box;
+        }
+        
+        .fc-img img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border:1rem solid #fff;
+            box-sizing: border-box;
+        }
+        .fc-event{
+            background: transparent;
+            border: none;
+            display: inline-flex;
+            color:#000!important;
+        }
+        .fc-day-grid-event{
+            margin: 0!important;
+            padding: 0!important;
+            border: 0!important;
+        }
+        .fc-day-grid-event .fc-content{
+            overflow: visible;
+        }
+        .fc-tooltip{
+            z-index: 100;
+            width: 347rem;            
+            bottom: 100%;
+            left: -145rem;           
+            border-radius: 4rem;
+            display: none;
+            box-sizing: border-box;
+            padding-bottom: 13rem;
+        }
+        .fc-tooltip-content{
+            position: relative;
+            padding: 20rem;
+            background-color: #fff;
+            box-sizing: border-box;
+            box-shadow: 0rem 162rem 65rem rgba(34, 42, 47, 0.01), 0rem 91rem 55rem rgba(34, 42, 47, 0.02), 0rem 41rem 41rem rgba(34, 42, 47, 0.03), 0rem 10rem 22rem rgba(34, 42, 47, 0.03), 0rem 0rem 0rem rgba(34, 42, 47, 0.03);
+        }
+       
+        .fc-tooltip-content::after{
+            content:"";
+            position: absolute;
+            width: 16rem;
+            height: 13rem;
+            background-image: url('/assets/img/poligon.svg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            left: 50%;
+            transform:translateX(-50%);
+            bottom: -10rem;
+        }
+        .fc-link span{
+            margin-right: 16rem;
+            cursor: pointer;
+        }
+        .fc-link{
+            padding-top: 20rem;
+        }
+        .fc-tooltip-date,.fc-tooltip-title{
+            font-size: 16rem;
+            line-height: 20rem;
+            font-weight: 300;
+            letter-spacing: -0.3rem;
+            margin-bottom: 8rem;
+        }
+        .fc-content-skeleton tr{
+            position: relative;
+        }
+        .fc-content-skeleton .fc-event-container{
+            position: relative;
+        }
+        .fc-content-skeleton .fc-event-container .fc-event{
+            position: absolute;
+        }
+        .fc-content-skeleton tr:last-child .fc-event{
+            left: 30rem;
+        }
+        
+    </style>
+    {% endif %}
+</body>
+</html>

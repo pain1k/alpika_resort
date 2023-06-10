@@ -1,0 +1,49 @@
+<section class="home-gallery{% if sctionClass %} {{sctionClass}}{% endif %}">
+  {% if intrier %}                 
+      {% include "../_block/" + box + ".html" ignore missing %}      
+    {% else %}
+      <h2 class="inner-title home-gallery__title text-center line-after">
+        <span>
+        {% if sectionTitile %}
+        {{sectionTitile | striptags(true) | escape | nl2br}}
+        {% else %}
+          вас ждут горы, кристальный воздух, <br>заповедные леса и берег моря рядом
+        {% endif %}
+        </span>
+      </h2>
+  {% endif %}
+ 
+  <div class="home-gallery__swiper swiper">
+    <div class="swiper-wrapper">
+      
+      {% for i in gallery %}
+        <div class="home-gallery__slide swiper-slide">
+            <a href="{{i.id}}.jpg" class="home-gallery__content relative" data-fslightbox="gallery">                   
+              <img src="{{i.id}}.jpg" alt="">
+            </a>
+          </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+  {% if noContainer %}     
+    {% else %}
+    <div class="container">
+      <div class="home-gallery__names d-flex">
+        
+          <div class="home-gallery__name-1 home-gallery__name gallery-name" data-url="{{pervLink}}" {% if prev %} {% else %}} style="opacity:0"{% endif %}>
+            {{prev}}
+          </div>
+          <div class="home-gallery__name-2 home-gallery__name gallery-name active">
+            {{active}}
+          </div>
+
+          <div class="home-gallery__name-3 home-gallery__name gallery-name" data-url="{{nextLink}}"  {% if next %} {% else %}} style="opacity:0"{% endif %}>
+            {{next}}
+          </div>
+        
+      </div>
+    </div>
+  {% endif %}
+</section>
+

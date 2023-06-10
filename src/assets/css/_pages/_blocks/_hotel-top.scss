@@ -1,0 +1,140 @@
+.hotel-top{
+  align-items: center;
+  margin-bottom: 80rem;
+  &--start{
+    align-items: flex-start;
+  }
+  @media (max-width:1200px){
+    margin-bottom: 60rem;
+  }
+  @media (max-width:991px){
+    margin-bottom: 40rem;
+  }
+  &__title{
+    margin-bottom: 0!important;
+      }
+  &__descriptions{
+    @media (max-width:1200px) {
+       max-width: unset;
+       width: 100%;
+       margin-top: 16rem; 
+      }
+    &--small{
+      @media (max-width:767px){
+        margin-top: 10rem;
+      }
+    }
+    &--lg{
+      @media (max-width:1599px) {
+          max-width: 58%;
+          justify-content: space-between;
+          .description{
+            max-width: unset;
+           width: calc(50% - 10rem);
+          @media (max-width:991px) {
+              max-width: unset;
+              width: 100%;
+            }
+          }
+        }
+         @media (max-width:1200px) {
+          max-width: unset;
+          width: 100%;
+          margin-top: 16rem; 
+          }
+          
+    }
+  }
+  &__description{
+    max-width: 365rem;
+    &--contacts{
+      width: 365rem;
+    }
+    &--small{
+      font-size: 18rem;
+      line-height: 22rem;
+      letter-spacing: -0.3rem;
+    }
+    &+div{
+      margin-left: 20rem;
+      @media (max-width:991px) {
+          margin-left: 0;
+          margin-top: 8rem;
+        }
+    }
+    @media (max-width:991px) {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+
+  &__contact{
+    align-items: center;
+    &:not(:last-child){
+      margin-bottom: 16rem;
+    }
+    &-icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24rem;
+      line-height: 24rem;
+      margin-right: 8rem;
+    }
+  }
+
+  &__link{
+    margin-top: 30rem;
+    @media (max-width:991px){
+      margin-top: 26rem;
+    }
+  }
+
+  &__subtitle{
+    margin-top: 40rem;
+    @media (max-width:991px) {
+        margin-top: 16rem;
+      }
+  }
+  &__price{
+    display: inline-flex;
+    align-items: flex-end;
+    margin-top: 30rem;
+    @media (max-width:991px) {
+        margin-top: 16rem;
+      }
+    &-price{
+      font-weight: normal;
+      font-size: 48rem;
+      line-height: 48rem;
+      letter-spacing: 2.5rem;
+      @media (max-width:991px) {
+          letter-spacing: unset;
+          font-size: 36rem;
+          line-height: 40rem;
+        }
+    }
+    &-unit{
+      font-size: inherit;
+      line-height: 1.4;
+      letter-spacing: inherit;
+    }
+  }
+  &__head{
+    @media (max-width:1599px) {
+        max-width: 41.847826087%;
+      } 
+    @media (max-width:991px) {
+        max-width: unset;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 14rem;
+      }   
+    &--skp{
+      @media (max-width:991px){
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+

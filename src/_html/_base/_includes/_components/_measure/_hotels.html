@@ -1,0 +1,30 @@
+<section class="section hotels">
+  {% set hotels = [
+  {title:'коммерческие мероприятия',url:'#',img:'assets/img/measure/hotel'},
+  {title:'свадьбы и праздники',url:'#',img:'assets/img/measure/hotel1'}
+  ] %}
+    <h2 class="inner-title home-gallery__title text-center line-after">
+    <span class="line-after__span">
+      Ваш идеальный выбор <br>для проведения мероприятия <br>любого масштаба
+    </span>
+    </h2>
+  <div class="container">
+    <div class="hotels__box d-grid">
+      {% for item in hotels %}
+        <div class="hotels__item relative">
+          <div class="hotels__info absolute">
+            <div class="inner-title hotels__name inner-title--mb">
+              {{item.title}}
+            </div>
+            
+            <a href="{{item.url}}" class="hotels__link hotels__link--pd box-link">узнать больше</a>
+          </div>
+          <picture>
+            <source srcset="{{item.img}}.webp" type="image/webp">
+            <img src="{{item.img}}.jpg" alt="">
+          </picture>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+{% set items = [
+  {id:1,name:'Алексей
+              <br>Корнев'},
+  {id:2,name:'Маргарита
+              <br>Васильева'},
+  {id:3,name:'Никита
+              <br>Селезнев'} 
+  ] %} 
+<section class="section masters">
+  <h2 class="inner-title masters__title text-center line-after">
+    <span>  
+      не упустите шанс <br>потренироваться рядом с чемпионами <br>мира и Олимпийских игр
+    </span>
+  </h2>
+  <div class="container masters__container">
+    <div class="swiper masters__slider">
+      <div class="swiper-wrapper">
+        {% for item in items %}
+          <div class="swiper-slide masters__item">
+            <div class="masters__img">
+              <img src="/assets/img/masters/{{item.id}}.jpg" alt="">
+            </div>
+            <div class="masters__name">
+              {{item.name | striptags(true) | escape | nl2br}}
+            </div>
+            <div class="description masters__desc">
+              Мастера спорта, чемпиони призер международных и российских соревнований
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

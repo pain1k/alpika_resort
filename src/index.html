@@ -1,0 +1,20 @@
+{% set title = "Home" %}
+{% set bodyClass = "is-home" %}
+{% set wrapperClass = "wp-home" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_banner.html" %}    
+   {% include "_html/_base/_includes/_components/_book.html" %}    
+   {% include "_html/_base/_includes/_components/_hotels.html" %}    
+   {% include "_html/_base/_includes/_components/_winter-summer.html" %}    
+   {% include "_html/_base/_includes/_components/_service-slider.html" %}    
+   {% include "_html/_base/_includes/_components/_gallery-test.html" %}    
+   {% include "_html/_base/_includes/_components/_map-separator.html" %}    
+   {% include "_html/_base/_includes/_components/_service-slider2.html" %}
+   {% include "_html/_base/_includes/_components/_main-menu.html" %}
+   {% include "_html/_base/_includes/_components/_event-slider.html" %}
+   {% include "_html/_base/_includes/_components/_news-slider.html" %}
+   {% include "_html/_base/_includes/_components/_awards.html" %}
+{% endblock %}

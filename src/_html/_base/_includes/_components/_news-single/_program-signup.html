@@ -1,0 +1,48 @@
+{% set radio = [
+  {id:1,value:'Отдыхаю на Курорте Газпром'},
+  {id:2,value:'Отдыхаю на другом курорте'},
+  {id:3,value:'Живу в Красной Поляне'},
+  {id:4,value:'Живу в г. Сочи'}
+] %}
+<div class="program-signup" data-simplebar data-simplebar-auto-hide="false">
+    <div class="program-signup__container">
+      <div class="program-signup__close absolute">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2.66146 23.6693L0.328125 21.3359L9.66146 12.0026L0.328125 2.66927L2.66146 0.335938L11.9948 9.66927L21.3281 0.335938L23.6615 2.66927L14.3281 12.0026L23.6615 21.3359L21.3281 23.6693L11.9948 14.3359L2.66146 23.6693Z"
+            fill="#1C1B1F" />
+        </svg>
+      </div>
+      <div class="inner-title program-signup__title text-uppercase">
+        регистрация
+        <br>на фитнес-день
+      </div>
+      <form action="/" class="program-signup__form">
+        <div class="program-signup__input">
+          <input type="text" name="fio" value="" placeholder="ФИО">
+        </div>
+        <div class="program-signup__location">
+          <div class="program-signup__location-title text-uppercase">откуда будете добираться</div>
+          {% for item in radio %}
+            <label for="inp-{{item.id}}" class="description program-signup__label">
+              <input type="radio" name="location" id="inp-{{item.id}}">
+              <i class="program-signup__circle"></i>
+              <span class="program-signup__label-value">{{item.value}}</span>
+            </label>
+          {% endfor %}
+        </div>
+        <div class="program-signup__input">
+          <input type="tel" name="phone" value="" placeholder="номер телефона">
+        </div>        
+        <div class="program-signup__input program-signup__input--area">
+          <textarea name="comment" id="comment" placeholder="комментарий"></textarea>
+        </div>
+        <div class="program-signup__footer">
+          <button class="program-signup__btn text-uppercase">зарегистрироваться</button>
+        </div>
+        <div class="program-signup__accept">
+          Нажимая кнопку Зарегистрироваться, я даю <a href="#">согласие на обработку персональных данных</a>
+        </div>
+      </form>
+    </div>
+</div>

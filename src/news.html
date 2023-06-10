@@ -1,0 +1,10 @@
+{% set title = "Новости" %}
+{% set bodyClass = "is-news" %}
+{% set wrapperClass = "wp-news" %}
+{% set intrier = true %}
+{% set headerClass = "header--dark" %}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+    {% include "_html/_base/_includes/_components/_news/_index.html" %}  
+{% endblock %}

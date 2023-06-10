@@ -1,0 +1,25 @@
+
+{% set box = "_leaning-top2" %}
+{% set intrier = true %}
+{% set noContainer = true %}
+<section class="section section--lg bx" id="skp2">
+  {% include "./_gallery-test.html" %}  
+  <section class="section section--lg">
+    <h2 class="inner-title masters__title text-center line-after">
+      <span>
+        все Инструкторы специализируются <br>на работе с детьми
+      </span>
+    </h2>
+    {% include "./_instruktors.html" %} 
+  </section>
+   {% include "./_group.html" %} 
+   {% include "./_contacts2.html" %}
+   <section class="map-separator map-mob">
+      <div class="map-separator__btn line-after">
+        <span class="inline-flex map-separator__img">
+          <img src="assets/img/map-mob.svg" alt="">
+        </span>
+      </div>
+      <a href="#" class="map-separator__link box-link">изучить карту курорта</a>
+    </section>
+</section>

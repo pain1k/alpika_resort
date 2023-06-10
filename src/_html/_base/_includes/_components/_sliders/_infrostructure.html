@@ -1,0 +1,50 @@
+<section class="section infrastructure">
+  <div class="container infrastructure__container relative">
+    <h2 class="display-h2 hotels__title text-uppercase">
+      {% if infrastructureTitile %}
+      {{infrastructureTitile | striptags(true) | escape | nl2br}}
+      {% else %}
+      уникальная <br>инфраструктура
+      {% endif %}    
+    </h2>
+    <div class="infrastructure__slider swiper">
+      <div class="swiper-wrapper">
+        {% for item in [1,2,3,4,5] %}
+        <div class="swiper-slide infrastructure__slide">
+          <div class="infrastructure__content relative">
+            <div class="infrastructure__info absolute">
+              <div class="inner-title infrastructure__name">
+                трассы мирового <br>уровня
+              </div>              
+              <a href="#" class="infrastructure__link box-link">изучить трассы</a>
+            </div>
+            <picture>
+              <source srcset="assets/img/sliders/infra/{{item}}.webp" type="image/webp">
+              <img src="assets/img/sliders/infra/{{item}}.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="infrastructure__arrows slider__arrows d-flex absolute">
+      <div class="slider__arrow-prev infrastructure__arrow-prev">
+        <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.671875L0 5.002L7.5 9.33213V5.752H112V4.252H7.5V0.671875Z"
+            fill="#0F6EB4" />
+        </svg>
+      </div>
+      <div class="slider__arrow-next infrastructure__arrow-next">
+        <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M104.5 0.671875L112 5.002L104.5 9.33213V5.752H0V4.252H104.5V0.671875Z" fill="#0F6EB4" />
+        </svg>
+      </div>
+    </div>
+    <div class="infrastructure__progress-wrap d-flex">
+      <div class="infrastructure__progress d-flex">
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>

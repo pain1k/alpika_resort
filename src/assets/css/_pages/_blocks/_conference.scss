@@ -1,0 +1,62 @@
+.conference{
+  color: $light;
+  &__item{
+    img{
+      width: 100%;
+    }
+    @media (max-width:768px) {
+        height: 510rem;
+        img{
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+  }
+  &__footer{
+    bottom: 40rem;
+    left: 40rem;
+    @media (max-width:991px) {
+        bottom: 20rem;
+        left: 20rem;
+      }
+  }
+  &__header{
+    top: 38rem;
+    left: 40rem;
+    @media (max-width:991px) {
+        top: 20rem;
+        left: 20rem;
+      }
+  }
+  &__name{
+    color: $light;
+  }
+  &__desc{
+    max-width: 365rem;
+    margin-bottom: 30rem;
+    @media (max-width:991px) {
+        max-width: 320rem;
+      }
+  }
+  &__arrows{
+    top: 38rem;
+    right: 28rem;
+    @media (max-width:991px) {
+        display: none;
+      }
+  }
+  &__wrapp{
+    padding-right: 40rem;
+    @media (max-width:991px){
+      padding-right: 0;
+    }
+  }
+  &__nav{
+    bottom: 40rem;
+    right: 40rem;
+    @media (max-width:991px) {
+        display: none;
+      }
+  }
+}

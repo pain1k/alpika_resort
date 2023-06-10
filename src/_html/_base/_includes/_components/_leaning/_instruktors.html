@@ -1,0 +1,63 @@
+{% set instructors = [
+  {name:'Елена
+  <br>Вдовина'},
+  {name:'Тимур
+  <br>Гарифуллин'},
+  {name:'Данила
+  <br>Гришин'},
+  {name:'Елена
+  <br>Вдовина'},
+  {name:'Тимур
+  <br>Гарифуллин'},
+  {name:'Данила
+  <br>Гришин'},
+  {name:'Елена
+  <br>Вдовина'}
+  ] %}
+
+
+
+
+  <div class="container instructors__container">
+    <div class="instructors__header d-flex jcsb relative">
+      <div class="instructors__links d-flex">      
+        <div class="instructors__link active">все</div>
+        <div class="instructors__link">горные лыжи</div>
+        <div class="instructors__link">сноуборд</div>
+      </div>
+      <div class="instructors__arrows slider__arrows d-flex">
+        <div class="slider__arrow-prev instructors__arrow-prev swiper-button-disabled">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.671875L0 5.002L7.5 9.33213V5.752H112V4.252H7.5V0.671875Z"
+              fill="#0F6EB4"></path>
+          </svg>
+        </div>
+        <div class="slider__arrow-next instructors__arrow-next">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M104.5 0.671875L112 5.002L104.5 9.33213V5.752H0V4.252H104.5V0.671875Z" fill="#0F6EB4"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="instructors__slider swiper">
+      <div class="swiper-wrapper">
+        {% for item in instructors %}
+          <div class="swiper-slide instructors__item">
+            <div class="instructors__img">
+              <img src="/assets/img/fake.jpg" alt="" class="fluid">
+            </div>
+            
+            <div class="instructors__name">
+              {{item.name | striptags(true) | escape | nl2br}}
+            </div>
+            <div class="description instructors__post">Старший инструктор</div>
+            
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="swipe-pagination-box d-flex instructors__spb">
+      <div class="swipe-pagination instructors__pagination"></div>
+    </div>
+  </div>

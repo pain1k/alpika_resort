@@ -1,0 +1,11 @@
+<section class="section heading">
+  <h2 class="inner-title heading__title text-center line-after">
+    <span>  
+      {% if heading %}
+        {{heading | striptags(true) | escape | nl2br}}
+      {% else %}
+        широкий выбор для спорта, отдыха <br>и развлечений круглый год
+      {% endif %}
+    </span>
+  </h2>
+</section>

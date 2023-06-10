@@ -1,0 +1,62 @@
+
+{% set levels = [
+  {name:'Базовый уровень',stiffness:2},
+  {name:'Продвинутый',stiffness:3},
+  {name:'Фрирайд',stiffness:5},
+  {name:'для детей',stiffness:2}
+  ] %}
+{% set desc = 'Снаряжение базового уровня подойдет для начинающих райдеров' %}
+<section class="section section--lg section--levels bx" id="skp2">
+  <h2 class="inner-title home-gallery__title text-center line-after">
+    <span>  
+      снаряжение
+      <br>для лыжников
+    </span>
+  </h2>
+  <div class="container rental__flex d-flex jcsb">
+
+    <div class="rental__thumbs">
+      <div class="rental__thumb">
+        <div class="rental__thumb-box complect">
+          <img src="/assets/img/rental/complect.svg" alt="">
+        </div>
+        <div class="description rental__thumb-name">Комплект</div>
+      </div>
+      <div class="rental__thumb">
+        <div class="rental__thumb-box board">
+          <img src="/assets/img/rental/board.svg" alt="">
+        </div>
+        <div class="description rental__thumb-name">Лыжи</div>
+      </div>
+      <div class="rental__thumb">
+        <div class="rental__thumb-box boot">
+          <img src="/assets/img/rental/boot.svg" alt="">
+        </div>
+        <div class="description rental__thumb-name">Ботинки</div>
+      </div>
+      <div class="rental__thumb">
+        <div class="rental__thumb-box sticks">
+          <img src="/assets/img/rental/sticks.svg" alt="">
+        </div>
+        <div class="description rental__thumb-name">Ботинки</div>
+      </div>
+    </div><!-- /rental__thumbs-->
+
+    <div class="rental__levels">
+      {% for level in levels %}
+        <div class="rental__level d-flex jcsb">
+          <div class="rental__level-info">
+            <div class="inner-title rental__level-name">{{level.name}}</div>
+            <div class="description rental__level-desc">{{desc}}</div>
+            <a href="#" class="rental__level-link box-link">посмотреть цены</a>
+            
+          </div>
+          <div class="rental__level-img">
+            <img src="{% if level.name === 'Базовый уровень'%}/assets/img/rental/levels/5.jpg{% else %}/assets/img/rental/fake1.jpg{% endif%}" alt="">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

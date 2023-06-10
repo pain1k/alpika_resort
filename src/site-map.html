@@ -1,0 +1,95 @@
+{% set title = "Карта сайта" %}
+{% set bodyClass = "is-site-map" %}
+{% set wrapperClass = "wp-site-map" %}
+
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   <div class="container lbc">
+        <div class="lb">
+            <a href="/">Главная(1)</a>
+        </div>
+        <div class="lb">
+            <a href="/about.html">О курорте(1)</a>
+        </div>
+        <div class="lb">
+            <a href="/winter-holidays.html">Зимний отдых(1)</a>
+        </div>
+        <div class="lb">
+            <a href="/hotels.html">Отели(1)</a>
+        </div>
+        <div class="lb">
+            <a href="/hotel.html">Страница отеля(1)</a>
+        </div>
+        <div class="lb">
+            <a href="/room.html">Страница номера(1)</a>
+        </div>
+        <div class="lb">
+            <a href="/news.html">Новости(3)</a>
+        </div>   
+        <div class="lb">
+            <a href="/news-single.html">Страница Новости(3 [1])</a>            
+        </div>   
+        <div class="lb">           
+            <a href="/news-single2.html">Страница Новости(3 [2])</a>
+        </div>   
+        <div class="lb">           
+            <a href="/news-single2.html">Страница Новости(3 [2])</a>
+        </div>   
+        <div class="lb">           
+            <a href="/cross-country-skiing.html">беговые лыжи(2)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/sky-pass.html">СКИ-ПАССЫ(2)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/leaning.html" style="color:blue;font-weight:500">Обучение(2)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/measure.html" style="color:blue;font-weight:500">мероприятия(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/commers.html" style="color:blue;font-weight:500">Комерческие мерориятия(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/restaurants.html" style="color:red;font-weight:500">Рестораны(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/restaurant.html" style="color:green;font-weight:500">Ресторан(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/roads.html" style="color:white;font-weight:500;background:#000">Трассы(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/rental.html" style="color:white;font-weight:500;background:#000">прокат(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/bizness.html" style="color:white;font-weight:500;background:#000">для бизнеса(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/rules.html" style="color:white;font-weight:500;background:red">Правила проживания(3)</a>
+        </div>   
+        <div class="lb">           
+            <a href="/contacts.html">Контакты(2)</a>
+        </div>   
+   </div>
+   <style>
+       .lbc{
+           display: flex;
+           flex-flow: column;
+           align-items: center;
+           margin-top: 150px;
+       }
+       
+       .lb a{
+        width: 200px;
+           padding: 20px;
+           font-size: 18px;
+           display: flex;
+           align-items: center;
+           border: 1px solid #000;
+           margin-bottom: 10px;
+       }
+   </style>
+{% endblock %}

@@ -1,0 +1,27 @@
+.map-separator{
+  flex-flow: column;
+  align-items: center;
+  
+  &__btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;    
+  }
+  &__link{
+    margin-top: 21rem;
+  }
+  &__img{
+    @media (max-width:768px){
+      padding-left: 0!important;
+      padding-right: 0!important;
+      
+      width: 244rem;
+      height: 201px;
+      background: url('../img/frame.svg') no-repeat center center;
+      background-size: 172rem 100%;
+      img{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+
+{% set levels = [
+  {name:'Базовый уровень',stiffness:2,img:'/assets/img/rental/levels/1.jpg'},
+  {name:'Продвинутый',stiffness:3,img:'/assets/img/rental/levels/2.jpg'},
+  {name:'Фрирайд',stiffness:5,img:'/assets/img/rental/levels/3.jpg'},
+  {name:'для детей',stiffness:2,img:'/assets/img/rental/levels/4.jpg'}
+  ] %}
+{% set desc = 'Снаряжение базового уровня подойдет для начинающих райдеров' %}
+<section class="section section--lg bx" id="skp">
+  <div class="container rental__flex d-flex jcsb">
+
+    <div class="rental__thumbs">
+      <div class="rental__thumb">
+        <div class="rental__thumb-box complect">
+          <img src="/assets/img/rental/complect.svg" alt="">
+        </div>
+        <div class="description rental__thumb-name">Комплект</div>
+      </div>
+      <div class="rental__thumb">
+        <div class="rental__thumb-box board">
+          <img src="/assets/img/rental/board.svg" alt="">
+        </div>
+        <div class="description rental__thumb-name">Доски</div>
+      </div>
+      <div class="rental__thumb">
+        <div class="rental__thumb-box boot">
+          <img src="/assets/img/rental/boot.svg" alt="">
+        </div>
+        <div class="description rental__thumb-name">Ботинки</div>
+      </div>
+    </div><!-- /rental__thumbs-->
+
+    <div class="rental__levels">
+      {% for level in levels %}
+        <div class="rental__level d-flex jcsb">
+          <div class="rental__level-info">
+            <div class="inner-title rental__level-name">{{level.name}}</div>
+            <div class="description rental__level-desc">{{desc}}</div>
+            <a href="#" class="rental__level-link box-link">посмотреть цены</a>
+            <div class="description rental__level-footer d-grid">
+              <div class="color-gray rental__level-key">Жесткость доски</div>
+              <div class="rental__level-value">
+                <div class="rental__level-stiffness">
+                  {% for span in [1,2,3,4,5] %}
+                  <span {% if span <= level.stiffness %} class="active"{% endif %}>
+                    
+                  </span>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="color-gray rental__level-key">Размеры доски</div>
+              <div class="rental__level-value">140-166 см</div>
+              <div class="color-gray rental__level-key">Размеры ботинок</div>
+              <div class="rental__level-value">36-45</div>
+            </div>
+          </div>
+          <div class="rental__level-img">
+            <img src="{{level.img}}" alt="">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

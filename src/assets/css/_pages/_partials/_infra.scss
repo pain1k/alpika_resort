@@ -1,0 +1,142 @@
+.infrastructure{
+  &__slider{
+    position: relative;
+    top: -2rem;
+    @media (max-width:767px) {
+        left: -20rem;
+        width: 103%;
+      }
+    @media (max-width:375px) {        
+        width: 106%;
+      }
+  }
+  &__slide{
+    img{
+      width: 100%;
+    }
+    @media (max-width:375px){
+      height: 510rem;
+      .infrastructure__content{
+        height: 100%;
+      }
+      img{
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__name{
+    margin-bottom: 30rem;
+    @media (max-width:767px) {
+       margin-bottom: 22rem;
+      }
+    &--nogutters{
+      margin-bottom: 0!important;
+    }
+  }
+  &__info{
+    top: 40rem;
+    left: 40rem;
+    color: $light;
+    @media (max-width:767px) {
+        top: 20rem;
+        left: 20rem;
+      }
+  }
+  &__description{
+    margin-bottom: 30rem;
+    max-width: 290rem;
+    @media (max-width:767px) {
+        margin-bottom: 22rem;
+      }
+  }
+  &__arrows{
+    top: 0;
+    right: 68rem;
+
+    @media (max-width:1200px) {
+        right: 20rem;
+      }
+    @media (max-width:767px) {
+        display: none;
+      }
+  }
+  &__progress-wrap{
+    justify-content: flex-end;
+    margin-top: 60rem;
+    padding-right: 27rem;
+    @media (max-width:767px) {
+        margin-top: 20rem;
+      }
+  }
+  &__progress{
+    width: 50%;
+    height: 2rem;
+    background: rgba(15, 110, 180, 0.16);
+    @media (max-width:1600px) {
+        width: 722rem;
+      }
+    @media (max-width:1599px) {
+        width: 50%;
+      }
+    @media (max-width:767px) {
+        width: 100%;
+      }
+  
+    span {
+      width: 20%;
+      background-color: $accent;
+    }
+  }
+
+  &__footer{
+    bottom: 30rem;
+    left: 30rem;
+  }
+  &__location{
+    color: $light;
+    align-items: center;
+    span{
+      display: inline-block;
+      &:nth-of-type(2){
+        margin-right: 16rem;
+        margin-left: 16rem;
+        @media (max-width:480px) {
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+  &__mark{
+    align-items: center;
+    justify-content: center;
+    margin-right: 8rem;
+  }
+  &__spb{
+    margin-top: 24rem;
+    justify-content: flex-end;
+    display: none;
+    @media (max-width:1200px) {
+        
+        display: flex;
+      }
+  }
+  &__pagination{
+    
+    @media (max-width:1200px) {
+      width: 100%;      
+    }
+  }
+
+  &__title{
+    &--commers{
+      @media (max-width:1200px) {
+        margin-bottom: 40rem!important;
+        font-size: 36rem;
+        line-height: 40rem;
+        font-weight: 300;
+      }
+    }
+  }
+}

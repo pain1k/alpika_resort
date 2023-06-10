@@ -1,0 +1,27 @@
+{% set title = "гранд отель поляна " %}
+{% set bodyClass = "is-hotel" %}
+{% set wrapperClass = "wp-hotel" %}
+{% set intrier = true %}
+{% set box = "_hotel-top" %}
+{% set sctionClass = "section--lg" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_hotel/_banner.html" %}   
+   {% include "_html/_base/_includes/_components/_hotel/_gallery-test.html" %}  
+   {% include "_html/_base/_includes/_components/_awards-md.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_service-slider.html" %}  
+   {% include "_html/_base/_includes/_components/_hotel/_winter-summer.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_service-slider2.html" %} 
+   {% include "_html/_base/_includes/_components/_block/_heading.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_infrostructure.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_infrostructure-res.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_investor.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_infrostructure-creativity.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_service-slider3.html" %} 
+   {% include "_html/_base/_includes/_components/_hotel/_investor2.html" %} 
+   {% include "_html/_base/_includes/_components/_about/_privileges.html" %}
+   {% include "_html/_base/_includes/_components/_map-separator.html" %}
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

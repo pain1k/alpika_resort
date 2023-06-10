@@ -1,0 +1,16 @@
+{% set title = "Ледовая арена" %}
+{% set bodyClass = "is-ice-court" %}
+{% set wrapperClass = "wp-ice-court" %}
+{% set headerClass = "header--dark" %}
+{% set intrier = true %}
+{% set box = "_ice-court-top" %}
+{% set topLinkText = "Развлечения" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+{% include "_html/_base/_includes/_components/_ice-court/_top.html" %}
+{% include "_html/_base/_includes/_components/_block/_ice-court.html" %}
+
+
+{% endblock %}

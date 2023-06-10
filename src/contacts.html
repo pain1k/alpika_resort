@@ -1,0 +1,16 @@
+{% set title = "Контакты" %}
+{% set bodyClass = "is-contacts" %}
+{% set wrapperClass = "wp-contacts" %}
+{% set headerClass = "header--dark" %}
+{% set box = "_room-top" %}
+{% set topLinkText = "о курорте" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+ {% include "_html/_base/_includes/_components/_contacts/_top.html" %}  
+ {% include "_html/_base/_includes/_components/_contacts/_header.html" %}  
+ {% include "_html/_base/_includes/_components/_contacts/_map.html" %}  
+ {% include "_html/_base/_includes/_components/_contacts/_main.html" %}  
+   
+{% endblock %}

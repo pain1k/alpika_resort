@@ -1,0 +1,92 @@
+<section class="section privileges cck">
+  <h2 class="inner-title masters__title text-center line-after">
+    <span>
+      беговые лыжи
+    </span>
+  </h2>
+  <div class="container">
+    <div class="privileges__box relative privileges__box--round">
+      <div class="inner-title privileges__title privileges__title--lg text-uppercase">
+        
+        <div class="privileges__aboniment pc-lg">абонемент.</div>
+        <div class="privileges__counterbox d-flex">
+          <div class="privileges__counter d-flex">
+            <div class="privileges__aboniment pc-md">абонемент.</div>
+            <div class="wrapp-md">
+              <span class="pc-md">на</span>
+              <span class="pc-value">3</span>&nbsp;<span>тренировки</span>
+            </div>
+          </div>
+          <div class="privileges__dc d-flex">
+            <div class="privileges__decriment"></div>
+            <div class="privileges__increment"></div>
+          </div>
+        </div>
+      </div>
+      <div class="privileges__footer d-flex">
+        <div class="privileges__prices d-flex">
+          <!--  -->
+          <div class="privileges__price">
+            <div class="privileges__num d-flex">
+              <span>11 000</span>
+              <span>₽</span>
+            </div>
+            <div class="description privileges__unit">по 1 часу</div>
+          </div>
+          <!--  -->
+          <div class="privileges__price">
+            <div class="privileges__num d-flex">
+              <span>15 000</span>
+              <span>₽</span>
+            </div>
+            <div class="description privileges__unit">по 1,5 часа</div>
+          </div>
+        </div>
+        <a href="#" class="privileges__link privileges__link--lg">
+          записаться
+        </a>
+      </div>
+      <div class="privileges__present privileges__present--lg absolute">
+        <img src="assets/img/sky.svg" alt="">
+      </div>
+    </div> 
+    <!--  -->
+    {% set tarifs = [
+      {name:'индивидуальная тренировка',desc:'Обучение одного человека 
+                                            <br>лично с тренером',p1:'4 000',p2:'5 500'},
+      {name:'парная тренировка',desc:'Обучение одного человека 
+                                            <br>лично с тренером',p1:'6 000',p2:'7 500'},
+      {name:'семейный',desc:'Проведите время вместе
+                                            <br>и сэкономьте семейный бюджет',p1:'4 000',p2:'5 500'},
+      {name:'команда',desc:'Групповые занятия для взрослыхи
+                                            <br>детей от 5 до 14 лет',p1:'4 000',p2:'5 500'}
+      ] %}
+    <div class="privileges__tarifs"> 
+      <div class="tarifs d-grid">
+        {% for tarif in tarifs %}
+        <div class="tarifs__item">
+          <div class="inner-title tarifs__header">
+            {{tarif.name}}
+          </div>
+          <div class="description tarif__desc">
+            {{tarif.desc | striptags(true) | escape | nl2br}}
+          </div>
+          <div class="tarifs__footer d-flex jcsb">
+            <div class="tarifs__pricesbox d-flex">
+              <div class="tarifs__price">
+                <div class="tarifs__num">{{tarif.p1}}₽</div>
+                <div class="description tarifs__unit">1 час</div>
+              </div>
+              <div class="tarifs__price">
+                <div class="tarifs__num">{{tarif.p2}}₽</div>
+                <div class="description tarifs__unit">1,5 часа</div>
+              </div>
+            </div>
+            <a href="#" class="tarifs__link text-uppercase">записаться</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

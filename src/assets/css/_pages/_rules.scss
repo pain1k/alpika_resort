@@ -1,0 +1,128 @@
+.rules{
+  &__box{
+    &-head{
+      width: 338rem;
+      padding-top: 40rem;
+      @media (max-width:1200px) {
+         width: 221rem;
+         padding-top: 30rem;
+        }
+      @media (max-width:768px){
+        padding-top: 0;
+      }
+    }
+    &-info{
+      width: calc(100% - 642rem);
+      padding-top: 40rem;
+      padding-bottom: 40rem;
+      border-top: 1rem solid $dark;
+      @media (max-width:1440px){
+        width: calc(100% - 438rem);
+      }
+      @media (max-width:1280px){
+        width: calc(100% - 388rem);
+      }
+      @media (max-width:1200px){
+        padding-bottom: 30rem;
+        padding-top: 30rem;
+        width: calc(100% - 271rem);
+      }
+      @media (max-width:768px){
+        width: 100%;
+        margin-top: 16rem;
+        border-top: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        br{
+          display: none;
+        }
+        span{
+          display: block;
+        }
+      }
+    }
+    &-item{
+      &:last-child{
+        .rules__box-info{
+          padding-bottom: 0;
+        }
+      }
+      @media (max-width:768px){
+        padding-top: 30rem;
+        padding-bottom: 30rem;
+        border-top: 1rem solid $dark;
+        &:last-child{
+          padding-bottom: 0;
+        }
+      }
+    }
+
+  }
+
+  &__list{
+    li+li{
+      margin-top: 16rem;
+      @media (max-width:768px){
+        margin-top: 12rem;
+      }
+    }
+    li{
+      padding-left: 24rem;
+      position: relative;
+      @media (max-width:768px){
+        padding-left: 9.51rem;
+      }
+      &::before{
+        content:"";
+        position: absolute;
+        top: 9rem;
+        left: 0;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background-color: $accent;
+        @media (max-width:768px){
+          width: 5rem;
+          height: 5rem;
+          top: 7rem;
+        }
+      }
+    }
+  }
+  &__files-container{
+    display: flex;
+    flex-flow: column;
+  }
+  &__file{
+    display: inline-flex;    
+    align-self: baseline;
+    &+&{
+      margin-top: 40rem;
+      @media (max-width:767px) {
+        margin-top: 20rem;
+      }
+    }
+    &-icon{
+      display: inline-flex;
+      width: 24rem;
+      height: 24rem;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10rem;
+      @media (max-width:767px){
+        margin-right: 8rem;
+      }
+    }
+    &-name{
+      width: calc(100% - 34rem);
+      @media (max-width:767px) {
+          width: calc(100% - 32rem);
+        }
+      @media (max-width:480px) {
+          br{
+            display: none;
+          }
+        }
+    }
+  }
+}

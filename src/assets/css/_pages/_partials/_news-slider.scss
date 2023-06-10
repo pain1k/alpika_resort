@@ -1,0 +1,52 @@
+.news-feed{
+  &__arrows {
+      top: 0rem;
+      right: 40rem;
+      @media (max-width:1200px) {
+          right: 20rem;
+        }
+    }
+  &__slide{
+    width: auto!important;
+    @media (max-width:575px) {
+        max-width: 250rem;
+      }
+  }
+    &__img {
+      margin-bottom: 16rem;
+    }
+  &__content {
+    max-width: 365rem;
+  }
+  
+
+  &__name {
+    margin-bottom: 16rem;
+  }
+
+  &__desc {
+    font-size: 20rem;
+    line-height: 24rem;
+    letter-spacing: -0.3px;
+    margin-bottom: 16rem;
+    @media (max-width:1200px) {
+        font-size: 16rem;
+        line-height: 18rem;
+      }
+  }
+   &__btn{
+    width: 212rem;
+  }
+
+  &__spb{
+    @media (max-width:1200px) {
+        width: 100%;
+        margin-bottom: 40rem;
+        order:-1;
+        .swipe-pagination {
+          width: 100%;
+        }
+      }
+  }
+    
+}

@@ -1,0 +1,36 @@
+.masters{
+  &__title{
+    margin-bottom: 120rem;
+    @media (max-width:1200px) {
+      margin-bottom: 60rem;
+    }
+  }
+
+ 
+
+  &__img{
+    margin-bottom: 16rem;
+    img{
+      width: 100%;
+    }
+  }
+
+  &__name{
+    font-size: 24rem;
+    line-height: 28rem;
+    letter-spacing: 1rem;
+    margin-bottom: 16rem;
+    font-weight: normal;
+    @media (max-width:1200px) {
+        font-size: 22rem;
+        line-height: 24rem;
+        letter-spacing: 1.2rem;
+      }
+  }
+  &__desc{
+    max-width: 269rem;
+    @media (max-width:1200px){
+      max-width: 215rem;
+    }
+  }
+}

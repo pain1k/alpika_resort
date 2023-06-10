@@ -1,0 +1,30 @@
+
+{% set box = "_leaning-top" %}
+{% set intrier = true %}
+{% set noContainer = true %}
+<section class="section section--lg bx" id="skp">
+  {% include "./_gallery-test.html" %}  
+  <section class="section section-md heading">
+    <h2 class="inner-title heading__title text-center line-after">
+      <span>        
+          Инструкторы подготовлены<br>
+          по стандартам Международной<br>
+          ассоциации инструкторов ISIA   
+      </span>
+    </h2>
+  </section>
+  <section class="section instructors">
+    {% include "./_instruktors.html" %} 
+  </section>
+    {% include "./_tarifs.html" %} 
+    {% include "./_contacts.html" %}     
+    <section class="map-separator map-mob">
+      <div class="map-separator__btn line-after">
+        <span class="inline-flex map-separator__img">
+          <img src="assets/img/map-mob.svg" alt="">
+        </span>
+      </div>
+      <a href="#" class="map-separator__link box-link">изучить карту курорта</a>
+    </section>
+</section>
+

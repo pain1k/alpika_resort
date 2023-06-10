@@ -1,0 +1,17 @@
+{% set title = "04 декабря 2022 Открытая тренировка по плаванию" %}
+{% set bodyClass = "is-new" %}
+{% set wrapperClass = "wp-new" %}
+{% set headerClass = "header--dark" %}
+{% set topLinkText = "новости курорта" %}
+{% set maskedPhone = true %}
+{% set program = true %}
+{% set pageTitile = 'ОТКРЫТАЯ ТРЕНИРОВКА ПО ПЛАВАНИЮ' %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_room/_top.html" %}     
+   {% include "_html/_base/_includes/_components/_news-single/_section.html" %}     
+   {% include "_html/_base/_includes/_components/_news-single/_program-signup.html" %}     
+{% endblock %}
+

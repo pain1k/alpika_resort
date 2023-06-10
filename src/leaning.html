@@ -1,0 +1,23 @@
+{% set title = "Ваш билет к вершине" %}
+{% set bodyClass = "is-sky" %}
+{% set wrapperClass = "wp-sky" %}
+{% set headerClass = "header--dark" %}
+{% set topLinkText = "зимний отдых" %}
+{% set darkToggler = true %}
+
+{% set box = "_skp-top" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_sky-pass/_top.html" %}     
+   <div class="container">
+        <h1 class="display-h1 page-name text-uppercase">
+            Национальная <br>школа <br>инструкторов
+        </h1>
+   </div>
+{% include "_html/_base/_includes/_components/_leaning/_sky-passes.html" %}
+{% include "_html/_base/_includes/_components/_leaning/_first.html" %}
+{% include "_html/_base/_includes/_components/_leaning/_second.html" %}
+{% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% set title = "рестораны и бары" %}
+{% set bodyClass = "is-restaurant" %}
+{% set wrapperClass = "wp-restaurant" %}
+{% set headerClass = "header--dark" %}
+{% set intrier = true %}
+{% set box = "_restaurant-top" %}
+{% set topLinkText = "рестораны и бары" %}
+{% set darkToggler = true %}
+{% set maskedPhone = true %}
+{% set noSvg = true %}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_room/_top.html" %}     
+   {% include "_html/_base/_includes/_components/_restaurant/_gallery-test.html" %}  
+   <div class="brone restaurants__brone-fixed">
+      <a href="#" class="main-top__measure-link btn-signup">забронировать стол</a>
+   </div>
+   <section class="section heading">
+      <h2 class="inner-title heading__title text-center line-after">
+         <span>           
+            Кажется, победитель в конкурсе
+            <br>Главное гастрономическое открытие
+            <br>года уже известен          
+         </span>
+      </h2>
+   </section>
+   {% include "_html/_base/_includes/_components/_restaurant/_winter-summer.html" %}  
+   {% include "_html/_base/_includes/_components/_restaurant/_service-slider.html" %}  
+   {% include "_html/_base/_includes/_components/_restaurant/_menu.html" %}  
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+   {% include "_html/_base/_includes/_components/_restaurant/_program-signup.html" %}
+{% endblock %}

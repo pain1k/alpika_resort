@@ -1,0 +1,71 @@
+.hotels{
+  
+  &__box{
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20rem;
+    color: $light;
+    position: relative;
+    @media (max-width:1200px) {
+        grid-gap: 8rem;
+      }
+    @media (max-width:767px) {
+        grid-template-columns: 1fr;
+        margin-left: -40rem;
+        left: 20rem;
+      }
+    img{
+      width: 100%;
+    }
+  }
+  &__info{
+    top: 40rem;
+    left: 40rem;   
+    @media (max-width:767px) {
+        top: 20rem;
+        left: 20rem;
+      }
+  }
+  &__name{
+    font-weight: normal;
+    max-width: 264rem;
+    @media (max-width:1440px){
+      max-width: 240rem;
+      margin-bottom: 12rem;
+    }
+  }
+  &__desc{
+    font-size: 20rem;
+    line-height: 24rem;
+    max-width: 365rem;
+    margin-bottom: 30rem;
+    letter-spacing: -0.3px;
+    @media (max-width:1440px){
+      margin-bottom: 12rem;
+    }
+    @media (max-width:1200px) {
+      font-size: 16rem;
+      line-height: 18rem;
+    }
+    @media (max-width:428px) {
+     max-width: 75%;
+      margin-bottom: 21rem;
+    }
+  }
+
+  &__item{
+    @media (max-width:428px){
+      height: 510rem;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__link{
+    &--pd{
+      padding-top: 10rem;
+      display: block;
+    }
+  }
+}

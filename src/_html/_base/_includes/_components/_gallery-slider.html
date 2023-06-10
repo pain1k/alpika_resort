@@ -1,0 +1,31 @@
+<section class="section home-gallery">
+  <h2 class="inner-title home-gallery__title text-center line-after">
+    <span>
+      вас ждут горы, кристальный воздух, <br>заповедные леса и берег моря рядом
+    </span>
+  </h2>
+  {% set gallery = [{id:1,name:'газпром Лаура'},{id:2,name:'газпром альпика'},{id:3,name:'Черное море'}]%}
+  <div class="home-gallery__swiper swiper">
+    <div class="swiper-wrapper">
+      {% for item in gallery %}
+      <div class="home-gallery__slide swiper-slide">
+        <div class="home-gallery__content relative">
+          <picture>
+            <source srcset="assets/img/sliders/gallery/{{item.id}}.webp" type="image/webp">
+            <img src="assets/img/sliders/gallery/{{item.id}}.jpg" alt="">
+          </picture>          
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container">
+    <div class="home-gallery__names d-flex">
+      {% for item in gallery %}
+        <div class="home-gallery__name-{{item.id}} home-gallery__name gallery-name{% if item.id===2 %} active{% endif %}">
+          {{item.name}}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+@mixin btn($width:100%,$height:60rem,$bg:$dark,$color:$light,$fz:16rem,$bdr:8rem,$ls:1.8rem){ 
+  font-size: $fz;
+  width: $width;
+  height: $height;
+  background-color: $bg;
+  color: $color;
+  border: none;
+  border-radius: $bdr;
+  line-height: $height;
+  cursor: pointer;
+  letter-spacing: $ls;
+  font-weight: normal;
+  transition: all .2s;
+  border: 1px solid $bg;
+  display: flex;
+  justify-content: center;
+  &:hover{
+    background-color: transparent;
+    color:$bg;
+  }
+}
+@mixin bordered($w:291rem,$h:60rem,$color:$dark,$s:16rem,$lh:20rem,$ls:1.8px,$fw:500){
+  width: $w;
+  height: $h;
+  color: $dark;
+  border: 1px solid $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $s;
+  line-height: $lh;
+  letter-spacing: $ls;
+  border-radius: 8rem;
+  font-weight: $fw;
+  transition: all .2s;
+  &:hover{
+    background-color: $color;
+    color: $light;
+  }
+}
+
+@mixin light($h,$p){
+position: relative;
+z-index: 1;
+padding: 0 $p;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: $light;
+text-transform: uppercase;
+font-weight: 500;
+color: $dark;
+font-size: 14rem;
+letter-spacing: 1.4rem;
+line-height: $h;
+height: $h;
+border-radius: 8rem;
+transition: all .2s;
+&:hover{
+  background-color: $gray-hover;
+}
+}

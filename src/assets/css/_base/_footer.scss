@@ -1,0 +1,202 @@
+.footer{
+  &__logo{
+    flex-flow: column;
+    align-items: center;
+    &-mob{
+      display: none;
+    }
+    @media (max-width:1440px) {
+       flex-flow: row-reverse;
+       width: 100%;
+       justify-content: space-between;
+       align-items: flex-end;
+      }
+
+    @media (max-width:428px){
+      .footer__logo-desk{
+        display: none;
+      }
+      .footer__logo-mob{
+        display: block;
+      }
+    }
+    
+    
+    &-name{
+      font-size: 20rem;
+      line-height: 24rem;
+      letter-spacing: -.3px;
+      margin-top: 15rem;
+      @media (max-width:1440px){
+        margin-top: 0;
+      }
+      @media (max-width:1200px){
+       font-size: 16rem;
+       line-height: 18rem;
+      }
+      @media (max-width:428px){
+        position: relative;
+        top: -7rem;
+      }
+    }
+  }
+  &__box{
+    padding-top: 40rem;
+    padding-bottom: 40rem;
+    width: 100%;
+    border-bottom: 1.5rem solid rgba($disable,.2);
+    @media (max-width:428px) {
+        padding-top: 23rem;
+        padding-bottom: 30rem;
+      }
+    &--top{
+      justify-content: center;      
+    }
+    &--bottom{
+      @media (max-width:1440px) {
+          justify-content: space-between;
+        }
+      @media (max-width:1200px) {
+          flex-flow: column;
+          padding-top: 30rem;
+          padding-bottom: 35rem;
+        }
+    }
+    
+  }
+
+  
+
+  &__list{
+    &.mt-auto{
+      margin-top: auto;
+    }   
+    &-item{
+      &:not(:last-child){
+        margin-bottom: 8rem;
+      }
+    }  
+    @media (max-width:1200px) {
+      display: none;
+      padding-top: 16rem!important;
+    }
+  }
+  &__item{
+    display: flex;
+    flex-flow: column;
+    font-size: 20rem;
+    line-height: 24rem;
+    letter-spacing: -.3px;
+    @media (max-width:1200px) {
+        font-size: 16rem;
+        line-height: 18rem;
+      }
+    &--adress{
+      position: absolute;
+      left: 50%;
+      transform:translateX(-50%);
+      top: 40rem;
+      @media (max-width:1440px) {
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: unset;
+          display: none;
+        }
+      @media (max-width:1200px) {
+        display: flex;
+        order:-1;
+        margin-bottom: 33px;
+        span{
+          text-align-last: left;
+        }
+      }
+    }
+    &:last-child{
+      margin-left: auto;
+      @media (max-width:1440px) {        
+        margin-left: 0;
+      }
+    }
+    &:first-child{
+     margin-right: 78rem;
+     @media (max-width:1440px) {        
+        margin-right: 0;
+      }
+     @media (max-width:1200px) {        
+        margin-bottom: 22rem;
+      }
+    }
+    &:nth-child(2){
+     
+     @media (max-width:1200px) {        
+       display: none;
+      }
+    }
+  }
+  &__phones{
+    &-item{
+      a{
+        margin-left: auto;
+        @media (max-width:1200px){
+          margin-left: 16rem;
+        }
+      }
+    }
+    .text-center{
+      text-align: left;
+      margin-bottom: 16rem;
+      @media (max-width:1200px) {
+        display: none;
+        
+      }
+    }
+    @media (max-width:1200px) {        
+       display: none;
+      padding-top: 16rem;
+      justify-content: flex-start;
+      }
+  }
+  &__container-bottom{
+    justify-content: space-between;
+    font-size: 20rem;
+    line-height: 24rem;
+    letter-spacing: -.3rem;
+    padding-top: 40rem;
+    padding-bottom: 40rem;
+    @media (max-width:1200px){
+      flex-flow: column;
+      font-size: 16rem;
+      line-height: 18rem;
+      padding-top: 30rem;
+      padding-bottom: 22rem;
+    }
+  }
+  &__socials{
+    grid-template-columns: repeat(5,auto);
+    grid-column-gap: 20rem;
+    align-items: center;
+    span{
+      height: 20rem;
+      width: 2rem;
+      background-color: $dark;
+    }
+    @media (max-width:1200px){
+      order:-1;
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 75rem;
+      grid-row-gap: 16rem;
+      align-self: baseline;
+      margin-bottom: 38rem;
+      span{
+        display: none;
+      }
+    }
+  }
+  &__copyright{
+    @media (max-width:1200px){
+      margin-bottom: 18rem;
+    }
+  }
+  
+}

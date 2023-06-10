@@ -1,0 +1,28 @@
+ <div class="section rules__files">
+    <h2 class="inner-title home-gallery__title text-center line-after">
+      {% if hideTitle %}
+        <span class="sm-hide">
+          {{filesTitile | striptags(true) | escape | nl2br}}
+        </span>
+        <span class="sm-inline-flex">
+          {{hideTitle | striptags(true) | escape | nl2br}}
+        </span>
+      {% else %}
+        <span>
+          {{filesTitile | striptags(true) | escape | nl2br}}
+        </span>
+      {% endif %}
+    </h2>
+    <div class="container rules__files-container">
+      {% for file in files %}
+        <a href="#" class="description rules__file">
+          <span class="rules__file-icon">
+            <img src="/assets/img/pdf.svg" alt="">
+          </span>
+          <span class="rules__file-name">
+            {{file | striptags(true) | escape | nl2br}}
+          </span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>

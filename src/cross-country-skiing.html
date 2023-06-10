@@ -1,0 +1,23 @@
+{% set title = "школа беговых лыж и биатлона" %}
+{% set bodyClass = "is-sky" %}
+{% set wrapperClass = "wp-sky" %}
+
+{% set intrier = true %}
+{% set box = "_sky-top" %}
+{% set noContainer = true %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}   
+   {% include "_html/_base/_includes/_components/_cck/_baner.html" %}     
+   {% include "_html/_base/_includes/_components/_cck/_gallery-test.html" %}     
+   {% include "_html/_base/_includes/_components/_cck/_masters.html" %}     
+   {% include "_html/_base/_includes/_components/_cck/_investor.html" %}
+   {% include "_html/_base/_includes/_components/_cck/_winter-summer.html" %} 
+   {% include "_html/_base/_includes/_components/_cck/_cck.html" %} 
+   {% include "_html/_base/_includes/_components/_cck/_cck-b.html" %} 
+   {% include "_html/_base/_includes/_components/_cck/_biatlone.html" %} 
+   {% include "_html/_base/_includes/_components/_cck/_school.html" %} 
+   {% include "_html/_base/_includes/_components/_map-separator.html" %}
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

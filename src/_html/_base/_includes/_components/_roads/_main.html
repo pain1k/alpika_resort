@@ -1,0 +1,148 @@
+
+{% set roads = [
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'green',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Лаура',count:'12',checkedClass:'unchecked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'5.1',checkedClass:'checked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'B1',checkedClass:'checked',countClass:'blue',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'dark',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'green',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Лаура',count:'12',checkedClass:'unchecked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'5.1',checkedClass:'checked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'B1',checkedClass:'checked',countClass:'blue',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'dark',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'green',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Лаура',count:'12',checkedClass:'unchecked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'5.1',checkedClass:'checked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'B1',checkedClass:'checked',countClass:'blue',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Лаура',count:'1',checkedClass:'checked',countClass:'dark',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'green',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Лаура',count:'12',checkedClass:'unchecked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'5.1',checkedClass:'checked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'B1',checkedClass:'checked',countClass:'blue',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'dark',length:'2 110 м',width:'50 м',dropping:'380 м'},  
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'green',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Лаура',count:'12',checkedClass:'unchecked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'5.1',checkedClass:'checked',countClass:'red',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'B1',checkedClass:'checked',countClass:'blue',length:'2 110 м',width:'50 м',dropping:'380 м'},
+  {name:'Альпика',count:'1',checkedClass:'checked',countClass:'dark',length:'2 110 м',width:'50 м',dropping:'380 м'}
+  
+  ] %}
+  
+<section class="section roads">  
+  
+    <div class="roads__top">
+
+      <div class="container roads__container">  
+
+        <div class="roads__header relative">
+
+          <div class="restaurants__nav-wrapp roads__nav-wrapp swiper">
+            <nav class="restaurants__nav swiper-wrapper">         
+              {% for item in [
+              'популярные',
+              'детям',
+              'новичкам',
+              'экстремальные',
+              'вечерние',
+              'открыты сейчас'] %}
+                <a href="#" class="swiper-slide restaurants__navItem roads__navItem{% if item === 'популярные' %} active{% endif %}">
+                  {{item}}
+                </a>
+              {% endfor %}
+            </nav>
+          </div>
+          <a href="#" class="roads__link box-link absolute">
+            <span>карта курорта</span>
+            <span class="roads__link-icon"></span>
+          </a>
+        </div><!-- /roads__header -->
+
+        <div class="description color-gray roads__table-row roads__table-row__head d-flex">
+          <div class="roads__table-status">
+            <span>статус</span>
+          </div>
+          <div class="roads__table-road">
+            <span class="drop">трасса</span>
+          </div>
+          <div class="roads__table-gradient d-flex">
+            <div class="roads__table-gradient__box d-flex">
+              <div class="roads__table-gradient__item lwd sm">
+                <span class="drop">градиент</span>
+              </div>
+              <div class="roads__table-gradient__item length sm-hide">
+                <span class="drop">Длина</span>
+              </div>
+              <div class="roads__table-gradient__item width sm-hide"><span>Ширина</span></div>
+              <div class="roads__table-gradient__item dropping sm-hide"><span>Перепад</span></div>
+            </div>
+          </div>
+        </div>
+        
+      </div><!-- /roads__container -->
+
+    </div><!-- /roads__top-->
+
+    <div class="container roads__list"><!-- БЛок со списком трасс-->
+
+      {% for item in roads %}
+      <!-- БЛок элемент списка трасс-->
+        <div class="description roads__table-row roads__table-row__col d-flex">
+          <div class="roads__table-status">
+            <span class="roads__checkbox {{item.checkedClass}}"></span>
+          </div>
+          <div class="roads__table-road">
+            <span class="roads__name d-flex">
+              <div class="roads__name-count {{item.countClass}}">
+                <span>{{item.count}}</span>
+              </div>
+              <span>{{item.name}}</span>
+            </span>
+          </div>
+          <div class="roads__table-gradient d-flex">
+            <div class="roads__table-gradient__box d-flex">
+              <div class="roads__table-gradient__item length">
+                <span class="roads__num" id="length">{{item.length}}</span>
+              </div>
+              <div class="roads__table-gradient__item width">
+                <span class="roads__num" id="width">{{item.width}}</span>
+              </div>
+              <div class="roads__table-gradient__item ">
+                <span class="roads__num" id="dropping">{{item.dropping}}</span>
+              </div>
+            </div>
+            <!-- ####### -->
+            <div class="roads__table-gradient__graph">
+              <img src="/assets/img/roads/graf.svg" alt="" class="hide-lg">
+              <img src="/assets/img/roads/graf-mobile.svg" alt="" class="show-lg">
+            </div>
+            <div class="roads__table-gradient__camera">
+              <a href="#" class="roads__camera-link box-link">
+                <span>карта курорта</span>
+                <div class="roads__camera-link__icon"></div>
+              </a>
+              <div class="roads__toggler">
+                <svg width="20" height="6" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.472 4.47106L11.4717 4.47136C11.0617 4.88209 10.5761 5.08398 10.0013 5.08398C9.42653 5.08398 8.94045 4.88208 8.52958 4.47121C8.11958 4.06121 7.91797 3.57555 7.91797 3.00065C7.91797 2.42584 8.11952 1.93978 8.52952 1.52899C8.94033 1.11891 9.42643 0.917318 10.0013 0.917318C10.5762 0.917318 11.0619 1.11893 11.4719 1.52893C11.8827 1.9398 12.0846 2.42588 12.0846 3.00065C12.0846 3.57541 11.8827 4.06102 11.472 4.47106ZM4.47201 4.47106L4.47171 4.47136C4.06167 4.88209 3.57606 5.08398 3.0013 5.08398C2.42654 5.08398 1.94093 4.88209 1.5309 4.47136L1.53059 4.47106C1.11986 4.06102 0.917969 3.57541 0.917969 3.00065C0.917969 2.42588 1.11988 1.9398 1.53075 1.52893C1.94075 1.11893 2.4264 0.917318 3.0013 0.917318C3.5762 0.917318 4.06186 1.11893 4.47186 1.52893C4.88273 1.9398 5.08464 2.42588 5.08464 3.00065C5.08464 3.57541 4.88274 4.06102 4.47201 4.47106ZM19.0846 3.00065C19.0846 3.57555 18.883 4.06121 18.473 4.47121C18.0622 4.88208 17.5761 5.08398 17.0013 5.08398C16.4265 5.08398 15.9404 4.88208 15.5296 4.47121C15.1196 4.06121 14.918 3.57555 14.918 3.00065C14.918 2.42578 15.1196 1.93968 15.5296 1.52886C15.9404 1.11887 16.4265 0.917318 17.0013 0.917318C17.5761 0.917318 18.0622 1.11887 18.473 1.52886C18.883 1.93968 19.0846 2.42578 19.0846 3.00065Z"
+                    fill="#989899" stroke="#FDFDFD" stroke-width="0.5" />
+                </svg>
+              </div>
+              <div class="camera-dropbox absolute">
+                <a href="#" class="camera-dropbox__link">
+                  <div class="camera-dropbox__icon camera"></div>
+                  <span>онлайн камера</span>
+                </a>
+                <a href="#" class="camera-dropbox__link">
+                  <div class="camera-dropbox__icon map"></div>
+                  <span>карта курорта</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / БЛок элемент списка трасс-->
+      {% endfor %}
+
+    </div>
+  
+</section>

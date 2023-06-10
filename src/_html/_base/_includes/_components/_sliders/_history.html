@@ -1,0 +1,60 @@
+<section class="section history">
+  <div class="container history__container relative">
+    <h2 class="display-h2 hotels__title text-uppercase">
+    {% if historyTitile %}
+      {{historyTitile | striptags(true) | escape | nl2br}}
+    {% else %}
+      место <br>с богатой <br>историей
+    {% endif %}
+    </h2>
+  
+    <div class="history__slider swiper">
+      <div class="swiper-wrapper">
+        {% for i in historySlides %}
+
+          <div class="swiper-slide history__slide" data-year="{{i.date}}">
+
+            <div class="history__content d-flex">
+              <div class="history__content-item">
+                <div class="history__content-img">
+                  <img src="{{i.items.first.img}}" alt="">
+                </div>
+                <div class="history__content-desc">
+                  {{i.items.first.desc}}
+                </div>
+              </div>            
+              <div class="history__content-item">
+                <div class="history__content-img">
+                  <img src="{{i.items.second.img}}" alt="">
+                </div>
+                <div class="history__content-desc">
+                  {{i.items.second.desc}}
+                </div>
+              </div>            
+            </div>
+
+          </div>
+
+
+        {% endfor %}
+      </div>
+    </div>
+    <div class="history__slider-controls">
+      <div class="history__slider-dots"></div>
+      <div class="history__slider-arrows">
+        <div class="history__slider-prev">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.671875L0 5.002L7.5 9.33213V5.752H112V4.252H7.5V0.671875Z"
+              fill="#0F6EB4" />
+          </svg>
+        </div>
+        <div class="history__slider-next">
+          <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M104.5 0.671875L112 5.002L104.5 9.33213V5.752H0V4.252H104.5V0.671875Z" fill="#0F6EB4" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

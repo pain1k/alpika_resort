@@ -1,0 +1,39 @@
+{% set title = "прокат снаряжения" %}
+{% set bodyClass = "is-sky" %}
+{% set wrapperClass = "wp-sky" %}
+{% set headerClass = "header--dark" %}
+{% set topLinkText = "зимний отдых" %}
+{% set darkToggler = true %}
+
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_sky-pass/_top.html" %}  
+    <div class="rental">   
+        <div class="container rental__header d-flex jcsb">
+            <h1 class="display-h1 text-uppercase">
+                прокат <br>снаряжения
+            </h1>
+            <div class="description rental__header-contacts">
+                <div class="rental__header-item d-flex">
+                    <div class="rental__header-icon icon-clock"></div>
+                    <span>
+                        Ежедневно С 8.30 до 23.00
+                    </span>
+                </div>
+                <div class="rental__header-item d-flex">
+                    <div class="rental__header-icon icon-phone"></div>
+                    <span>
+                        <a href="tel:89282455524">8 928 245-55-24</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        {% include "_html/_base/_includes/_components/_rental/_sky-passes.html" %}
+        {% include "_html/_base/_includes/_components/_rental/_first.html" %}
+        {% include "_html/_base/_includes/_components/_rental/_second.html" %}
+        {% include "_html/_base/_includes/_components/_rental/_thrid.html" %}
+        {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+    </div>
+{% endblock %}

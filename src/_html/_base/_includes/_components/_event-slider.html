@@ -1,0 +1,66 @@
+{% set sliders = [
+{name:'Семейный ужин от шеф-повара гранд отеля',
+desc:'В Континентале состоялся семейный ужин от шеф-повара Михаила Солохина',
+id:1
+},
+{name:'незабываемый Полет на параплане',
+desc:'На склоне Лаура состоится открытая тренировка по спуску на параплане',
+id:2
+},
+{name:'Гастроужин Chteau de Talu',
+desc:'ужин в авторском исполнении от шеф-повара ресторана Chateau de Talu Сергея Куприянова',
+id:3
+}
+]
+ %}
+
+<section class="section events">
+  <div class="container events__container relative">
+    <h2 class="display-h2 events__title text-uppercase">события курорта</h2>
+    <div class="events__slider swiper">
+      <div class="swiper-wrapper">
+        {% for slider in sliders %}
+          <div class="swiper-slide events__slide">
+            <div class="events__img">
+              <picture>
+                <source srcset="assets/img/sliders/events/{{slider.id}}.webp" type="image/webp">
+                <img src="assets/img/sliders/events/{{slider.id}}.jpg" alt="">
+              </picture>
+            </div>
+            <div class="events__slide-content">
+              <div class="inner-title events__name">
+                {{slider.name}}
+              </div>
+              <div class="events__desc">
+                {{slider.desc}}
+              </div>
+              <a href="#" class="services__item-link box-link">
+                узнать больше
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="events__arrows slider__arrows d-flex">
+      <div class="slider__arrow-prev events__arrow-prev">
+        <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.671875L0 5.002L7.5 9.33213V5.752H112V4.252H7.5V0.671875Z"
+            fill="#0F6EB4" />
+        </svg>
+      </div>
+      <div class="slider__arrow-next events__arrow-next">
+        <svg width="112" height="10" viewBox="0 0 112 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M104.5 0.671875L112 5.002L104.5 9.33213V5.752H0V4.252H104.5V0.671875Z" fill="#0F6EB4" />
+        </svg>
+      </div>
+    </div>
+    <div class="sliders-footer events__footer">
+      <a href="#" class="slidrs-footer-btn events__btn text-uppercase">календарь событий</a>
+      <div class="slidrs-footer-progress events__progress">
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>

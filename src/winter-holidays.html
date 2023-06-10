@@ -1,0 +1,18 @@
+{% set title = "winter holidays" %}
+{% set bodyClass = "is-holidays" %}
+{% set wrapperClass = "wp-holidays" %}
+
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_holidays/_banner.html" %}  
+   {% include "_html/_base/_includes/_components/_holidays/_slope.html" %}  
+   {% include "_html/_base/_includes/_components/_holidays/_service-slider.html" %}  
+   {% include "_html/_base/_includes/_components/_map-separator.html" %} 
+   {% include "_html/_base/_includes/_components/_holidays/_rental.html" %}  
+   {% include "_html/_base/_includes/_components/_holidays/_winter-summer.html" %} 
+   {% include "_html/_base/_includes/_components/_holidays/_investor.html" %} 
+   {% include "_html/_base/_includes/_components/_holidays/_winter-summer2.html" %} 
+   {% include "_html/_base/_includes/_components/_sliders/_infrostructure-holidays.html" %} 
+   {% include "_html/_base/_includes/_components/_news-slider2.html" %}
+{% endblock %}

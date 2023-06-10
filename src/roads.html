@@ -1,0 +1,22 @@
+{% set title = "Трассы" %}
+{% set bodyClass = "is-restaurant" %}
+{% set wrapperClass = "wp-restaurant" %}
+{% set headerClass = "header--dark" %}
+{% set topLinkText = "зимний отдых" %}
+{% set darkToggler = true %}
+{% set maskedPhone = true %}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+   {% include "_html/_base/_includes/_components/_room/_top.html" %}     
+   <div class="container">
+      <h1 class="display-h1 roads__title text-uppercase">
+         найдите <br>трассу <br>для себя
+      </h1>
+   </div>  
+   {% include "_html/_base/_includes/_components/_roads/_main.html" %}
+   <div class="brone restaurants__brone-fixed">
+      <a href="#" class="main-top__measure-link">купить ски-пасс</a>
+   </div>
+  
+{% endblock %}

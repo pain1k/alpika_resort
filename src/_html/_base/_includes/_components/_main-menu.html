@@ -1,0 +1,13 @@
+{% set menu = ['СПОРТ и спа','рестораны','отели','события','развлечения'] %}
+
+<section class="section page-menu">
+  <div class="container">
+    <div class="page-menu__list d-grid">
+      {% for item in menu%}
+      <a href="#" class="page-menu__item text-uppercase">
+        {{item}}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
