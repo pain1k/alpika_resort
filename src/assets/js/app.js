@@ -12,6 +12,9 @@ import {NewsFilter} from './modules/news'
 import {SkyScroll} from './modules/sky'
 import {Restourants} from './modules/restourants'
 import {Roads} from './modules/roads'
+import './modules/scrollertouch'
+import './modules/tabs'
+import './modules/map'
 
 $(function(){
   let tooltips = $('.tooltip-box')
