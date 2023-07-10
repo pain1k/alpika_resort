@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
+  "homepage": "https://pain1k.github.io/gh-pages",
   "scripts": {
     "dev": "gulp",
-    "prod": "gulp --prod"
+    "prod": "gulp --prod",
+    "dep": "gh-pages -d public"
   },
   "author": "Nikita Sizov",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-fonter": "^0.3.0",
     "gulp-if": "^3.0.0",
